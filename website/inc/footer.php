@@ -28,6 +28,7 @@
                         </a>
                     </div>
                     <div class="footer-legal">
+                        <a href="faq.php">FAQ</a>
                         <a href="huisregels.php">Huisregels</a>
                         <a href="privacy.php">Privacy</a>
                         <a href="algemene-voorwaarden.php">Voorwaarden</a>
