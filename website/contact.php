@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { $success = true; }
 
                     <div style="margin-bottom: 1.5rem;">
                         <span class="label-caps" style="color: var(--taupe-brown); display: block; margin-bottom: 8px;">ADRES</span>
-                        <p style="margin: 0;">Straatnaam 123<br>1234 AB Plaatsnaam</p>
+                        <p style="margin: 0;">Emmalaan 1F<br>5109 TA 's Gravenmoer</p>
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
@@ -78,8 +78,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { $success = true; }
                 </div>
             </div>
 
-            <div style="margin-top: 60px; height: 350px; background-color: var(--surface); display: flex; align-items: center; justify-content: center; color: var(--on-surface-variant);" class="reveal">
-                <span class="label-caps">[Google Maps locatie]</span>
+            <div style="margin-top: 60px;" class="reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=Emmalaan+1F,+5109+TA+'s+Gravenmoer&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="400"
+                    style="border:0; display:block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
             </div>
         </div>
     </section>

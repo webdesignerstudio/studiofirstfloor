@@ -7,7 +7,7 @@
                     <div class="footer-contact">
                         <p><span class="icon">&#128205;</span> Emmalaan 1F, 5109 TA 's Gravenmoer</p>
                         <p><span class="icon">&#9742;</span> 06 375 282 38</p>
-                        <p><span class="icon">&#9993;</span> pilatesstudiofirstfloor@gmail.com</p>
+                        <p><span class="icon">&#9993;</span> info@studiofirstfloor.nl</p>
                     </div>
                 </div>
                 <div class="footer-nav">

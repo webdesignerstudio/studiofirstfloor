@@ -9,7 +9,7 @@ include 'inc/nav.php';
     <!-- Hero -->
     <section class="hero">
         <div class="hero-bg">
-            <img src="img/studio-1.jpg" alt="Studio First Floor">
+            <img src="img/hero.png" alt="Studio First Floor">
         </div>
         <div class="hero-content reveal">
             <h1>Kracht, Rust <br>& Stijl</h1>
