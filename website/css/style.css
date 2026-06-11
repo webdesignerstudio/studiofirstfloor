@@ -322,16 +322,25 @@ section { padding: var(--section-gap) 0; }
 .bento-card:hover { background-color: var(--primary-container); }
 
 .bento-card .icon-box {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
     background-color: rgba(197, 168, 164, 0.1);
     border: 1px solid rgba(115, 93, 82, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 32px;
-    font-size: 2rem;
+    color: var(--taupe-brown);
     transition: var(--transition);
+}
+
+.bento-card .icon-box svg {
+    width: 28px;
+    height: 28px;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
 }
 
 .bento-card:hover .icon-box { background-color: var(--hot-pink); border-color: var(--hot-pink); color: var(--white); }
