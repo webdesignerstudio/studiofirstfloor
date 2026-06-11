@@ -6,113 +6,80 @@ include 'inc/nav.php';
 ?>
 
 <main>
-    <!-- Page Header -->
     <section style="padding-top: 120px; padding-bottom: 40px;">
         <div class="container">
             <div class="reveal">
-                <p class="section-label">Wat we doen</p>
-                <h1>Aanbod</h1>
-                <p style="max-width: 640px;">Bij Studio First Floor bieden we verschillende vormen van Pilates. Elke les wordt gegeven in kleine groepen van maximaal 8 personen zodat je de aandacht krijgt die je verdient.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dienstenlijst -->
-    <section style="padding-top: 0;">
-        <div class="container">
-            <ul class="feature-list">
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Basic Pilates</h3>
-                        <p class="feature-meta">Groepsles | alle niveaus</p>
-                    </div>
-                    <div>
-                        <p>De perfecte start voor beginners. Leer de basisprincipes van Pilates met oefeningen die je core versterken en je lichaam in balans brengen.</p>
-                    </div>
-                </li>
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Klassiek Pilates</h3>
-                        <p class="feature-meta">Groepsles | gevorderd</p>
-                    </div>
-                    <div>
-                        <p>Volg de originele Pilates-methode zoals Joseph Pilates deze bedoelde. Strakke sequenties, klassieke oefeningen en een sterke focus op controle en concentratie.</p>
-                    </div>
-                </li>
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Flow Pilates</h3>
-                        <p class="feature-meta">Groepsles | alle niveaus</p>
-                    </div>
-                    <div>
-                        <p>Een vloeiende les waarbij bewegingen naadloos in elkaar overgaan. Focust op flexibiliteit, coördinatie en een krachtige core.</p>
-                    </div>
-                </li>
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Power Pilates</h3>
-                        <p class="feature-meta">Groepsles | intensief</p>
-                    </div>
-                    <div>
-                        <p>Een intensieve les voor wie zijn grenzen wil verleggen. Sneller tempo, meer weerstand, extra focus op krachtopbouw.</p>
-                    </div>
-                </li>
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Early Bird Pilates</h3>
-                        <p class="feature-meta">Groepsles | ochtend</p>
-                    </div>
-                    <div>
-                        <p>Start je dag energiek met een ochtendles. Wakker worden met beweging, focus en een frisse mindset voor de rest van de dag.</p>
-                    </div>
-                </li>
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Personal Pilates</h3>
-                        <p class="feature-meta">1-op-1 | op aanvraag</p>
-                    </div>
-                    <div>
-                        <p>Een volledig persoonlijke Pilates-sessie, afgestemd op jouw lichaam, doelen en eventuele klachten. Maximale aandacht en resultaat.</p>
-                    </div>
-                </li>
-                <li class="feature-item reveal">
-                    <div>
-                        <h3>Duo Pilates</h3>
-                        <p class="feature-meta">2 personen | op aanvraag</p>
-                    </div>
-                    <div>
-                        <p>Train samen met een vriend, partner of familielid. Persoonlijke begeleiding in een duo-setting — de ideale combinatie van gezelligheid en gerichte aandacht.</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Materiaal / Sfeer -->
-    <section class="bg-light">
-        <div class="container">
-            <div class="section-header reveal">
-                <p class="section-label">De studio</p>
-                <h2>Ontdek de sfeer</h2>
-                <p>Onze studio is klein, knus en volledig ingericht voor jouw comfort. Warme houten vloeren, fijn daglicht en alle materialen die je nodig hebt.</p>
-            </div>
-            <div class="card-grid two-col reveal">
-                <div class="card" style="padding: 0; border: none;">
-                    <img src="img/studio-3.jpg" alt="Pilates materiaal in de studio" style="width: 100%; height: 300px; object-fit: cover;">
+                <div class="section-tag" style="justify-content: flex-start;">
+                    <div class="line"></div>
+                    <span>AANBOD</span>
                 </div>
-                <div class="card" style="padding: 0; border: none;">
-                    <img src="img/studio-2.jpg" alt="Interieur Studio First Floor" style="width: 100%; height: 300px; object-fit: cover;">
+                <h1>Wat we doen</h1>
+                <p style="max-width: 600px;">Bij Studio First Floor bieden we verschillende vormen van Pilates. Elke les wordt gegeven in kleine groepen van maximaal 8 personen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bento-section" style="padding-top: 0;">
+        <div class="container">
+            <div class="bento-grid reveal">
+                <div class="bento-card">
+                    <div class="icon-box">&#9733;</div>
+                    <h3>Basic Pilates</h3>
+                    <p>De perfecte start voor beginners. Basisprincipes in een rustig tempo voor alle niveaus.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <div class="icon-box">&#9679;</div>
+                    <h3>Klassiek Pilates</h3>
+                    <p>De originele methode met strakke sequenties, klassieke oefeningen en focus op controle.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <div class="icon-box">&#9670;</div>
+                    <h3>Flow Pilates</h3>
+                    <p>Vloeiende bewegingen met focus op flexibiliteit, coördinatie en een krachtige core.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <div class="icon-box">&#9671;</div>
+                    <h3>Power Pilates</h3>
+                    <p>Intensief, meer weerstand, sneller tempo. Voor wie zijn grenzen wil verleggen.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <div class="icon-box">&#9673;</div>
+                    <h3>Early Bird Pilates</h3>
+                    <p>Start je dag energiek met een ochtendles. Beweging en focus voor de rest van de dag.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <div class="icon-box">&#9679;</div>
+                    <h3>Personal Pilates</h3>
+                    <p>1-op-1 sessie op aanvraag, volledig afgestemd op jouw doelen.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <div class="icon-box">&#9677;</div>
+                    <h3>Duo Pilates</h3>
+                    <p>Train met z'n tweeën op aanvraag. Gezelligheid én gerichte aandacht.</p>
+                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-banner">
-        <div class="container reveal">
-            <h2>Benieuwd wat bij jou past?</h2>
-            <p style="max-width: 520px; margin: 0 auto 32px;">Neem contact met ons op voor persoonlijk advies of plan een proefles.</p>
-            <a href="contact.php" class="btn">Neem contact op</a>
+    <section>
+        <div class="container">
+            <div class="cta-box reveal">
+                <div class="shape-1"></div>
+                <div class="shape-2"></div>
+                <div class="cta-box-inner">
+                    <span class="label-caps tag">BEGINNERS WELKOM</span>
+                    <h2>Benieuwd wat bij jou past?</h2>
+                    <p>Neem contact met ons op voor persoonlijk advies of plan een proefles.</p>
+                    <a href="contact.php" class="btn-hot">NEEM CONTACT OP</a>
+                </div>
+            </div>
         </div>
     </section>
 </main>
