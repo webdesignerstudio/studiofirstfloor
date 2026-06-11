@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="nl"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Coaching | Studio First Floor</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#d0c4be",
+                        "on-primary-container": "#453522",
+                        "inverse-on-surface": "#f6efec",
+                        "tertiary-container": "#98a3b1",
+                        "serene-blush": "#F9F1F0",
+                        "surface-container-high": "#ede7e3",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dfd9d5",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#201a16",
+                        "primary": "#6e5b45",
+                        "on-secondary-container": "#69615c",
+                        "deep-taupe": "#333232",
+                        "primary-container": "#b59e85",
+                        "primary-fixed": "#f8dec3",
+                        "background": "#fff8f4",
+                        "surface-bright": "#fff8f4",
+                        "on-surface-variant": "#4d453d",
+                        "on-primary-fixed-variant": "#554430",
+                        "outline-variant": "#d0c4ba",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#bcc7d6",
+                        "primary-fixed-dim": "#dbc2a8",
+                        "outline": "#7f756c",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed": "#ece0d9",
+                        "on-tertiary-container": "#2f3945",
+                        "surface-container": "#f3ede9",
+                        "on-tertiary-fixed": "#121c27",
+                        "surface-variant": "#e8e1de",
+                        "on-primary-fixed": "#261908",
+                        "inverse-primary": "#dbc2a8",
+                        "secondary-container": "#e9ddd6",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f9f2ef",
+                        "error-container": "#ffdad6",
+                        "surface": "#fff8f4",
+                        "tertiary": "#555f6c",
+                        "on-tertiary-fixed-variant": "#3d4854",
+                        "surface-tint": "#6e5b45",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#33302e",
+                        "on-background": "#1d1b19",
+                        "surface-container-highest": "#e8e1de",
+                        "secondary": "#655d57",
+                        "tertiary-fixed": "#d8e3f3",
+                        "on-surface": "#1d1b19",
+                        "on-secondary-fixed-variant": "#4d4540",
+                        "warm-white": "#FDFBF9",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff8f4;
+            color: #333232;
+        }
+        .philosophy-line {
+            height: 1px;
+            background-color: #6e5b45;
+            width: 100px;
+            margin: 24px auto;
+        }
+        .fade-in {
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary/20">
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-warm-white/90 dark:bg-inverse-surface/90 flex justify-between items-center px-margin-desktop py-6 max-w-container-max mx-auto transition-all duration-500 ease-in-out backdrop-blur-sm">
+<div class="font-headline-md text-headline-md text-deep-taupe dark:text-inverse-on-surface tracking-tight">Studio First Floor</div>
+<div class="hidden md:flex space-x-gutter">
+<a class="font-label-caps text-label-caps text-deep-taupe/70 dark:text-inverse-on-surface/70 hover:text-primary transition-colors duration-300" href="#">Pilates</a>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary/40 pb-1" href="#">Coaching</a>
+<a class="font-label-caps text-label-caps text-deep-taupe/70 dark:text-inverse-on-surface/70 hover:text-primary transition-colors duration-300" href="#">Over Ons</a>
+<a class="font-label-caps text-label-caps text-deep-taupe/70 dark:text-inverse-on-surface/70 hover:text-primary transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-deep-taupe text-warm-white font-label-caps text-label-caps px-8 py-3 transition-colors duration-300 hover:bg-primary">Gratis Proefles</button>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid md:grid-cols-2 gap-gutter items-center">
+<div class="fade-in">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">Persoonlijke Groei</span>
+<h1 class="font-display-lg text-display-lg mb-6 text-deep-taupe">Vind balans in beweging en gedachten.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-8">
+                        Bij Studio First Floor geloven we dat ware kracht van binnenuit komt. Onze coaching is ontworpen om je te begeleiden naar een leven van meer rust, focus en fysiek welzijn.
+                    </p>
+<button class="bg-deep-taupe text-warm-white font-label-caps text-label-caps px-10 py-4 hover:bg-primary transition-all duration-300">Ontdek Jouw Traject</button>
+</div>
+<div class="relative h-[600px] overflow-hidden fade-in" style="animation-delay: 0.2s;">
+<img alt="Coaching Reflection" class="w-full h-full object-cover grayscale-[20%]" data-alt="A serene and minimalist interior scene featuring a single high-quality wooden chair placed near a large window where soft morning light streams in. The atmosphere is calm and reflective, with muted earth tones and plenty of negative space. The lighting is ethereal and soft, creating a sanctuary-like environment that emphasizes tranquility and mental clarity. In the background, a single green plant adds a touch of organic life to the warm white and taupe palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCp-mDD-zZ_IwaMsbzJOYDHRl2hxGNVwcOh87PQECuU1SIhG1omXeWLKL_BlKOdvXVLItWxwuTdJSMxewMO8pc_sDMYojVOKnKqoLTEJGoJJ2DlvCcYdH8PILjIbdJ80pQiEoctnXkXvpAW1aApBY4stN10T4inFyzeIqN7z25X4HoYmwkPQRXZ9nWLIO3uPHmXcAkJpmJm6AiP4VxgqtKEn44S9cTAgLh20xgmr-5a_Jyd5IIymyRo0DrC5K4S-CsgjAjE61NcYhQ"/>
+</div>
+</div>
+</section>
+<!-- Philosophy Quote -->
+<section class="w-full py-section-gap bg-serene-blush/30">
+<div class="max-w-4xl mx-auto text-center px-margin-mobile">
+<div class="philosophy-line"></div>
+<blockquote class="font-display-lg text-headline-lg md:text-display-lg text-deep-taupe italic">
+                    "Stilte is de bron van creativiteit en kracht."
+                </blockquote>
+<div class="philosophy-line"></div>
+</div>
+</section>
+<!-- Coaching Pillars - Bento Grid -->
+<section class="px-margin-desktop max-w-container-max mx-auto py-section-gap">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg text-deep-taupe text-center">Onze Aanpak</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap- gutter">
+<!-- Pillar 1 -->
+<div class="bg-serene-blush p-12 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">self_improvement</span>
+<h3 class="font-headline-md text-headline-md mb-4">Mindset</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ontdek de mentale barrières die je groei belemmeren en leer technieken om met meer rust en helderheid in het leven te staan.</p>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-serene-blush p-12 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">fitness_center</span>
+<h3 class="font-headline-md text-headline-md mb-4">Fysieke Balans</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Lichaam en geest zijn onlosmakelijk verbonden. We integreren fysiek bewustzijn in elk coachingstraject voor een holistisch resultaat.</p>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-serene-blush p-12 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md mb-4">Persoonlijke Groei</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Stel heldere doelen en werk stap voor stap aan de versie van jezelf die je wilt zijn, ondersteund door professionele begeleiding.</p>
+</div>
+</div>
+</section>
+<!-- Detailed Section - Text & Reflection -->
+<section class="px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+<div class="grid md:grid-cols-2 gap-section-gap items-center">
+<div class="order-2 md:order-1">
+<img alt="Zen Atmosphere" class="w-full aspect-[4/5] object-cover" data-alt="A close-up of a hand gently touching the surface of calm water, creating subtle concentric ripples. The lighting is dramatic yet soft, with highlights catching the water's surface against a dark, warm-toned background. The image evokes a sense of deep reflection, mindfulness, and the gentle impact of personal change. The color palette consists of deep browns, soft tans, and warm highlights, consistent with the Studio First Floor brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvo1XpnSO1YTCNVLmxXzUPGvFrUI5v35vainXNq_qHcJI1bLVHvoPJjjAFjH25hF2M4Ro6ZZKV5rpu2XWI59O0KORmksrrviM15f6fMBxh9XRKIJEFD28D0hWyux4P3vfM1E4hiAygwvXrBcRMoEphPDFtPExzb0-McWnGzFmIG1qoXSx0UAirMAoiQAZDmlJ7NOV-0Z70ncDFBiQ0NeLY2VVy25BLVvi5fuu-GVhI5WIQuvXJ34JIB4gg9lPfBG6TwIrFWO7OwoE"/>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-deep-taupe">Een veilige haven voor reflectie.</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                            Bij Studio First Floor bieden we een exclusieve omgeving waar je volledig jezelf kunt zijn. Onze coaching sessies vinden plaats in onze rustgevende studio, ver weg van de hectiek van alledag.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3 text-xl">check_circle</span>
+<span class="font-body-md text-body-md">Individuele sessies van 60 of 90 minuten.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3 text-xl">check_circle</span>
+<span class="font-body-md text-body-md">Maatwerk trajecten gebaseerd op jouw unieke behoeften.</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-3 text-xl">check_circle</span>
+<span class="font-body-md text-body-md">Combinatie van gespreksvoering en mindfulness technieken.</span>
+</li>
+</ul>
+<a class="inline-block border-b border-primary text-deep-taupe font-label-caps text-label-caps pb-1 mt-4 hover:text-primary transition-colors" href="#">Plan een kennismaking</a>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-secondary-container py-section-gap px-margin-desktop text-center">
+<div class="max-w-2xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg mb-6 text-deep-taupe">Klaar om de eerste stap te zetten?</h2>
+<p class="font-body-lg text-body-lg text-on-secondary-container mb-10">
+                    Samen kijken we naar wat jij nodig hebt om weer in je kracht te staan. Geen standaard praatjes, maar echte verdieping.
+                </p>
+<button class="bg-deep-taupe text-warm-white font-label-caps text-label-caps px-12 py-5 hover:scale-105 transition-transform duration-300">Vraag een Gratis Gesprek Aan</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-serene-blush dark:bg-secondary-container w-full py-section-gap flex flex-col items-center justify-center space-y-gutter px-margin-desktop w-full">
+<div class="font-headline-md text-headline-md text-deep-taupe mb-4">Studio First Floor</div>
+<div class="flex space-x-gutter mb-8">
+<a class="font-label-caps text-label-caps text-deep-taupe/60 dark:text-on-secondary-container/60 hover:text-primary transition-opacity duration-300" href="#">Algemene Voorwaarden</a>
+<a class="font-label-caps text-label-caps text-deep-taupe/60 dark:text-on-secondary-container/60 hover:text-primary transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-deep-taupe/60 dark:text-on-secondary-container/60 hover:text-primary transition-opacity duration-300" href="#">Studio Regels</a>
+</div>
+<p class="font-body-md text-body-md text-deep-taupe dark:text-on-secondary-container opacity-80">© 2024 Studio First Floor. All rights reserved.</p>
+</footer>
+<script>
+        // Simple scroll interaction for nav
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-6');
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-4');
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

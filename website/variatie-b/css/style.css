@@ -1,0 +1,662 @@
+/* ============================================
+   VARIATIE B — Bold Editorial
+   Design Persona: De Bold Editor
+   Krachtig, modernistisch, confident
+   ============================================ */
+
+:root {
+    --bg-primary: #FDF2F4;
+    --bg-secondary: #FFC0CB;
+    --accent: #FF1493;
+    --accent-dark: #D9127A;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+    --text-muted: #7A7A7A;
+    --border: #E0D5D8;
+    --wood: #D4A574;
+    --white: #FFFFFF;
+    --black: #000000;
+    --transition: 0.3s ease;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+}
+
+h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.section-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    background-color: var(--accent);
+    color: var(--white);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent);
+    color: var(--white);
+}
+
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.main-nav a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent);
+    transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--text-primary);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--text-primary);
+    transition: var(--transition);
+}
+
+/* Hero */
+.hero {
+    min-height: calc(100vh - 60px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: var(--bg-primary);
+}
+
+.hero-content {
+    padding: 80px 48px;
+}
+
+.hero-content h1 {
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 450px;
+    margin-bottom: 2rem;
+}
+
+.hero-image {
+    height: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sections */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+/* Feature List (numbered) */
+.feature-list {
+    list-style: none;
+    border-top: 1px solid var(--border);
+}
+
+.feature-item {
+    display: grid;
+    grid-template-columns: auto 1fr 2fr;
+    gap: 40px;
+    padding: 40px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+}
+
+.feature-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.feature-title h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.feature-meta {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+.feature-desc p {
+    margin-bottom: 0.5rem;
+}
+
+.feature-desc p:last-child {
+    margin-bottom: 0;
+}
+
+/* Pricing Cards */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.pricing-card {
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    padding: 40px 32px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.pricing-card.featured {
+    border-top: 4px solid var(--accent);
+    transform: translateY(-8px);
+}
+
+.pricing-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.pricing-card.featured:hover {
+    transform: translateY(-12px);
+}
+
+.pricing-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+.pricing-card .price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 16px 0;
+}
+
+.pricing-card .price span {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.pricing-card .price-desc {
+    font-size: 0.85rem;
+    margin-bottom: 24px;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--accent);
+    color: var(--white);
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 500px;
+    margin: 0 auto 32px;
+}
+
+.cta-section .btn {
+    background-color: var(--white);
+    color: var(--accent);
+    border-color: var(--white);
+}
+
+.cta-section .btn:hover {
+    background-color: transparent;
+    color: var(--white);
+}
+
+/* Quote */
+.quote-section {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--text-primary);
+}
+
+.quote-section img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.quote-overlay {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 24px;
+}
+
+.quote-overlay blockquote {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 500;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+}
+
+/* Contact */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    min-height: 600px;
+}
+
+.contact-info {
+    padding: 80px;
+    background-color: var(--bg-secondary);
+}
+
+.contact-info h3 {
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+}
+
+.contact-info strong {
+    display: block;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.contact-info a {
+    color: var(--accent);
+}
+
+.contact-form-wrapper {
+    padding: 80px;
+    background-color: var(--white);
+}
+
+.contact-form label {
+    display: block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    background-color: var(--bg-primary);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    background-color: var(--white);
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--text-primary);
+    color: var(--white);
+    padding: 60px 0 24px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand .logo-text {
+    color: var(--white);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-links a,
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    text-align: left;
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    margin-bottom: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image {
+        min-height: 300px;
+        order: -1;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-section {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 60px 40px;
+    }
+
+    .feature-item {
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+    }
+
+    .feature-desc {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-primary);
+        border-top: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition);
+    }
+
+    .main-nav.open {
+        max-height: 300px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 16px 24px;
+    }
+
+    .main-nav a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .hero-content {
+        padding: 40px 24px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 40px 24px;
+    }
+
+    .feature-item {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .feature-number {
+        font-size: 1.5rem;
+    }
+}
