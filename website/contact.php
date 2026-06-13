@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Contact';
+$pageDescription = 'Neem contact op met Studio First Floor in \'s Gravenmoer. Boek een proefles, stel een vraag of plan een afspraak. Bereikbaar via telefoon, e-mail of het contactformulier.';
 $currentPage = 'contact';
 include 'inc/header.php';
 include 'inc/nav.php';
@@ -105,15 +106,22 @@ $diensten = $cfg['diensten'] ?? [];
 
 <script>
 (function() {
-    // CSRF token ophalen
-    fetch('mail.php?csrf=1', { credentials: 'same-origin' })
-        .then(r => r.json())
-        .then(data => {
-            if (data.csrf) {
-                document.querySelectorAll('input[name="csrf_token"]').forEach(el => el.value = data.csrf);
-            }
-        })
-        .catch(() => {});
+    // CSRF token ophalen (gecached in sessionStorage)
+    (function loadCsrf() {
+        const cached = sessionStorage.getItem('csrf_token');
+        if (cached) {
+            document.querySelectorAll('input[name="csrf_token"]').forEach(el => el.value = cached);
+        }
+        fetch('mail.php?csrf=1', { credentials: 'same-origin' })
+            .then(r => r.json())
+            .then(data => {
+                if (data.csrf) {
+                    sessionStorage.setItem('csrf_token', data.csrf);
+                    document.querySelectorAll('input[name="csrf_token"]').forEach(el => el.value = data.csrf);
+                }
+            })
+            .catch(() => {});
+    })();
 
     // Formulier via fetch versturen
     const form = document.getElementById('contact-form');

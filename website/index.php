@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Home';
+$pageDescription = 'Studio First Floor — Pilates Studio in \'s Gravenmoer. Kracht, Rust & Stijl. Maximaal 8 personen per les, gratis parkeren, proefles mogelijk.';
 $currentPage = 'home';
 include 'inc/header.php';
 include 'inc/nav.php';
@@ -9,7 +10,10 @@ include 'inc/nav.php';
     <!-- Hero -->
     <section class="hero">
         <div class="hero-bg">
-            <img src="img/hero.png" alt="Studio First Floor">
+            <picture>
+                <source srcset="img/hero.webp" type="image/webp">
+                <img src="img/hero.png" alt="Studio First Floor" width="1024" height="1024" fetchpriority="high">
+            </picture>
         </div>
         <div class="hero-content reveal">
             <h1>Kracht, Rust <br>& Stijl</h1>
@@ -24,7 +28,10 @@ include 'inc/nav.php';
             <div class="intro-grid reveal">
                 <div class="intro-image">
                     <div class="image-bg"></div>
-                    <img src="img/studio-3.jpg" alt="Pilates apparatuur">
+                    <picture>
+                        <source srcset="img/studio-3.webp" type="image/webp">
+                        <img src="img/studio-3.jpg" alt="Pilates apparatuur" width="1080" height="1080" loading="lazy">
+                    </picture>
                 </div>
                 <div class="intro-content">
                     <div class="section-tag" style="justify-content: flex-start;">
@@ -85,19 +92,28 @@ include 'inc/nav.php';
             </div>
             <div class="instagram-grid reveal">
                 <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
-                    <img src="img/studio-1.jpg" alt="Studio First Floor">
+                    <picture>
+                        <source srcset="img/studio-1.webp" type="image/webp">
+                        <img src="img/studio-1.jpg" alt="Studio First Floor" width="1254" height="1254" loading="lazy">
+                    </picture>
                     <div class="ig-overlay">
                         <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </div>
                 </a>
                 <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
-                    <img src="img/studio-2.jpg" alt="Pilates les">
+                    <picture>
+                        <source srcset="img/studio-2.webp" type="image/webp">
+                        <img src="img/studio-2.jpg" alt="Pilates les" width="1254" height="1254" loading="lazy">
+                    </picture>
                     <div class="ig-overlay">
                         <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </div>
                 </a>
                 <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
-                    <img src="img/studio-3.jpg" alt="Studio sfeer">
+                    <picture>
+                        <source srcset="img/studio-3.webp" type="image/webp">
+                        <img src="img/studio-3.jpg" alt="Studio sfeer" width="1080" height="1080" loading="lazy">
+                    </picture>
                     <div class="ig-overlay">
                         <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </div>

@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Aanbod';
+$pageDescription = 'Ons aanbod bij Studio First Floor: Basic Pilates, Flow Pilates, Power Pilates, Personal Pilates en meer. Kleine groepen van maximaal 8 personen.';
 $currentPage = 'aanbod';
 include 'inc/header.php';
 include 'inc/nav.php';

@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Tarieven';
+$pageDescription = 'Transparante tarieven bij Studio First Floor. Abonnementen vanaf €49,99/maand, strippenkaarten en losse lessen. Proefles gratis.';
 $currentPage = 'tarieven';
 include 'inc/header.php';
 include 'inc/nav.php';
