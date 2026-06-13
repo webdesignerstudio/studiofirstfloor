@@ -4,8 +4,8 @@ $currentPage = 'contact';
 include 'inc/header.php';
 include 'inc/nav.php';
 
-$success = false;
-if ($_SERVER['REQUEST_METHOD'] === 'POST') { $success = true; }
+$cfg = include __DIR__ . '/site-config.php';
+$diensten = $cfg['diensten'] ?? [];
 ?>
 
 <main>
@@ -54,26 +54,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { $success = true; }
                     <span class="label-caps" style="color: var(--taupe-brown); margin-bottom: 24px; display: block;">FORMULIER</span>
                     <h3 style="margin-bottom: 2rem;">Stuur een bericht</h3>
 
-                    <?php if ($success): ?>
-                        <div style="background-color: var(--primary-container); padding: 24px; margin-bottom: 24px; border-left: 3px solid var(--hot-pink);">
-                            <p style="margin: 0; color: var(--on-surface);">Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
-                        </div>
-                    <?php endif; ?>
+                    <div id="form-feedback" style="display:none; padding: 24px; margin-bottom: 24px; border-left: 3px solid var(--hot-pink);">
+                        <p id="form-feedback-text" style="margin: 0; color: var(--on-surface);"></p>
+                    </div>
 
-                    <form class="contact-form" action="contact.php" method="POST">
-                        <label for="name">NAAM</label>
-                        <input type="text" id="name" name="name" required>
+                    <form class="contact-form" id="contact-form" action="mail.php" method="POST">
+                        <input type="hidden" id="csrf_token" name="csrf_token" value="">
+                        <input type="text" name="website_url" style="display:none" tabindex="-1" autocomplete="off">
+                        <input type="text" name="bedrijfsnaam_extra" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <label for="naam">NAAM</label>
+                        <input type="text" id="naam" name="naam" required>
 
                         <label for="email">E-MAIL</label>
                         <input type="email" id="email" name="email" required>
 
-                        <label for="subject">ONDERWERP</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <label for="telefoon">TELEFOON</label>
+                        <input type="tel" id="telefoon" name="telefoon" required>
 
-                        <label for="message">BERICHT</label>
-                        <textarea id="message" name="message" required></textarea>
+                        <label for="dienst">DIENST</label>
+                        <select id="dienst" name="dienst" required>
+                            <option value="" disabled selected>Kies een dienst</option>
+                            <?php foreach ($diensten as $dienst): ?>
+                                <option value="<?php echo htmlspecialchars($dienst); ?>"><?php echo htmlspecialchars($dienst); ?></option>
+                            <?php endforeach; ?>
+                        </select>
 
-                        <button type="submit" class="btn-hot">VERSTUUR BERICHT</button>
+                        <label for="bericht">BERICHT</label>
+                        <textarea id="bericht" name="bericht" required></textarea>
+
+                        <button type="submit" class="btn-hot" id="form-submit-btn">VERSTUUR BERICHT</button>
                     </form>
                 </div>
             </div>
@@ -92,5 +102,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { $success = true; }
         </div>
     </section>
 </main>
+
+<script>
+(function() {
+    // CSRF token ophalen
+    fetch('mail.php?csrf=1', { credentials: 'same-origin' })
+        .then(r => r.json())
+        .then(data => {
+            if (data.csrf) {
+                document.querySelectorAll('input[name="csrf_token"]').forEach(el => el.value = data.csrf);
+            }
+        })
+        .catch(() => {});
+
+    // Formulier via fetch versturen
+    const form = document.getElementById('contact-form');
+    const feedback = document.getElementById('form-feedback');
+    const feedbackText = document.getElementById('form-feedback-text');
+    const submitBtn = document.getElementById('form-submit-btn');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Bezig met versturen...';
+
+            const formData = new FormData(form);
+            fetch('mail.php', {
+                method: 'POST',
+                body: formData,
+                credentials: 'same-origin'
+            })
+            .then(r => r.json())
+            .then(data => {
+                feedback.style.display = 'block';
+                if (data.success) {
+                    feedback.style.backgroundColor = 'var(--primary-container)';
+                    feedback.style.borderLeftColor = 'var(--hot-pink)';
+                    feedbackText.textContent = data.message || 'Uw aanvraag is ontvangen! Wij nemen zo snel mogelijk contact met u op.';
+                    form.style.display = 'none';
+                } else {
+                    feedback.style.backgroundColor = 'rgba(220,53,69,0.1)';
+                    feedback.style.borderLeftColor = '#dc3545';
+                    feedbackText.textContent = data.message || 'Er is iets misgegaan. Probeer het opnieuw.';
+                    if (data.fouten) {
+                        data.fouten.forEach(f => {
+                            const el = document.getElementById(f) || document.querySelector('[name="' + f + '"]');
+                            if (el) el.style.borderBottomColor = '#dc3545';
+                        });
+                    }
+                }
+            })
+            .catch(() => {
+                feedback.style.display = 'block';
+                feedback.style.backgroundColor = 'rgba(220,53,69,0.1)';
+                feedback.style.borderLeftColor = '#dc3545';
+                feedbackText.textContent = 'Er is iets misgegaan bij het versturen. Probeer het later opnieuw.';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'VERSTUUR BERICHT';
+            });
+        });
+    }
+})();
+</script>
 
 <?php include 'inc/footer.php'; ?>

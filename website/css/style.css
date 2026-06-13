@@ -529,6 +529,7 @@ section { padding: var(--section-gap) 0; }
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
     width: 100%;
     padding: 14px 0;
@@ -543,6 +544,7 @@ section { padding: var(--section-gap) 0; }
 }
 
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
     outline: none;
     border-bottom-color: var(--hot-pink);
