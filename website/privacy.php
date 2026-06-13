@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Privacyverklaring';
+$pageDescription = 'Privacyverklaring van Studio First Floor. Lees hoe wij omgaan met uw persoonsgegevens en welke rechten u heeft.';
 $currentPage = '';
 include 'inc/header.php';
 include 'inc/nav.php';

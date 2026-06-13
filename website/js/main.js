@@ -27,4 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Cookie consent
+    const consentBanner = document.getElementById('cookieConsent');
+    const consentBtn = document.getElementById('cookieConsentBtn');
+    if (consentBanner && !localStorage.getItem('cookieConsent')) {
+        consentBanner.style.display = 'flex';
+    }
+    if (consentBtn) {
+        consentBtn.addEventListener('click', () => {
+            localStorage.setItem('cookieConsent', 'true');
+            if (consentBanner) consentBanner.style.display = 'none';
+        });
+    }
 });

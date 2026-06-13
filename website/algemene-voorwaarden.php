@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Algemene Voorwaarden';
+$pageDescription = 'Algemene voorwaarden van Studio First Floor. Informatie over abonnementen, strippenkaarten, annuleringen en betaling.';
 $currentPage = '';
 include 'inc/header.php';
 include 'inc/nav.php';

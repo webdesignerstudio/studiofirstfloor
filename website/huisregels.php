@@ -1,5 +1,6 @@
 <?php
 $pageTitle = 'Huisregels';
+$pageDescription = 'Huisregels van Studio First Floor. Lees onze richtlijnen voor een prettige en respectvolle ervaring voor iedereen.';
 $currentPage = '';
 include 'inc/header.php';
 include 'inc/nav.php';

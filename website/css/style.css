@@ -751,3 +751,45 @@ section { padding: var(--section-gap) 0; }
 @media (min-width: 768px) {
     .header-cta { display: inline-block; }
 }
+
+/* Cookie Consent */
+.cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--charcoal);
+    color: var(--white);
+    padding: 10px 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    z-index: 9999;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.cookie-consent p { margin: 0; }
+.cookie-consent a { color: var(--hot-pink); text-decoration: underline; }
+.cookie-consent button {
+    background: var(--hot-pink);
+    color: var(--white);
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+@media (min-width: 768px) {
+    .cookie-consent {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        min-width: 400px;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+}

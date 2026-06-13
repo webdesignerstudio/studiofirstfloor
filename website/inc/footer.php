@@ -38,6 +38,10 @@
             </div>
         </div>
     </footer>
+    <div class="cookie-consent" id="cookieConsent" role="dialog" aria-label="Cookie melding" style="display:none;">
+        <p>Deze website gebruikt functionele cookies om de werking te garanderen. <a href="privacy.php">Privacy</a></p>
+        <button id="cookieConsentBtn" type="button">Akkoord</button>
+    </div>
     <script src="js/main.js" defer></script>
 </body>
 </html>
