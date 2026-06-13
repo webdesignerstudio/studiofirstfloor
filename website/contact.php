@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') { $success = true; }
 
                     <div style="margin-bottom: 1.5rem;">
                         <span class="label-caps" style="color: var(--taupe-brown); display: block; margin-bottom: 8px;">TELEFOON</span>
-                        <a href="tel:+31612345678" style="color: var(--on-surface);">+31 6 12345678</a>
+                        <a href="tel:+31637528238" style="color: var(--on-surface);">06 375 282 38</a>
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">

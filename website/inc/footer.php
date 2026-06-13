@@ -20,7 +20,7 @@
                 <div class="footer-action">
                     <a href="contact.php" class="footer-btn">PROEFLES AANVRAGEN</a>
                     <div class="footer-social">
-                        <a href="https://instagram.com/studiofirstfloor" target="_blank" rel="noopener" aria-label="Instagram">
+                        <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </a>
                         <a href="mailto:info@studiofirstfloor.nl" aria-label="E-mail">

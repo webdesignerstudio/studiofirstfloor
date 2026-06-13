@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kleur preview — Studio First Floor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Manrope', sans-serif; line-height: 1.6; padding: 40px 20px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 8px; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin: 24px 0 12px; }
+        .intro { max-width: 700px; margin: 0 auto 48px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto; }
+        .card { border: 1px solid rgba(0,0,0,0.08); padding: 32px; }
+        .label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 16px; display: block; }
+        .swatch { width: 100%; height: 60px; margin: 8px 0; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 500; }
+        .btn { display: inline-block; padding: 14px 32px; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; text-decoration: none; margin: 12px 0; }
+        .fake-nav { padding: 16px; margin-bottom: 24px; font-size: 0.85rem; }
+        .fake-text { margin: 12px 0; font-size: 0.9rem; }
+        .fake-text.heading { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin: 16px 0 8px; }
+        .section-title { text-align: center; margin: 60px 0 32px; font-family: 'Playfair Display', serif; font-size: 1.5rem; }
+        .bg-swatch { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 0 auto 48px; }
+        .bg-card { padding: 32px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="intro">
+    <h1>Kleur preview</h1>
+    <p style="color: #4e4543;">Vergelijk de nieuwe opties. Scroll voor achtergrond, tekstkleur en accentkleuren.</p>
+</div>
+
+<!-- Background comparison -->
+<div class="section-title">Achtergrondkleuren — huidig vs. warm</div>
+<div class="bg-swatch" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="bg-card" style="background:#fef8f7; color:#1d1b1b; border:2px solid #FF007F;">
+        <strong style="font-family:'Playfair Display',serif;">HUIDIG</strong>
+        <p style="margin-top:8px; font-size:0.75rem;">#fef8f7</p>
+        <p style="font-size:0.7rem; margin-top:4px; color:#4e4543;">Koel roze-wit</p>
+    </div>
+    <div class="bg-card" style="background:#FBF8F4; color:#2D1F1B;">
+        <strong style="font-family:'Playfair Display',serif;">A. Luchtig</strong>
+        <p style="margin-top:8px; font-size:0.75rem;">#FBF8F4</p>
+        <p style="font-size:0.7rem; margin-top:4px; color:#4e4543;">Heel subtiel warm</p>
+    </div>
+    <div class="bg-card" style="background:#F7EFE6; color:#2D1F1B;">
+        <strong style="font-family:'Playfair Display',serif;">B. Crème</strong>
+        <p style="margin-top:8px; font-size:0.75rem;">#F7EFE6</p>
+        <p style="font-size:0.7rem; margin-top:4px; color:#4e4543;">Warm beige, duidelijk verschil</p>
+    </div>
+    <div class="bg-card" style="background:#F3E8DA; color:#2D1F1B;">
+        <strong style="font-family:'Playfair Display',serif;">C. Warm</strong>
+        <p style="margin-top:8px; font-size:0.75rem;">#F3E8DA</p>
+        <p style="font-size:0.7rem; margin-top:4px; color:#4e4543;">Herkenbaar warm (sterkste)</p>
+    </div>
+</div>
+<p style="text-align:center; max-width:600px; margin:0 auto 48px; font-size:0.85rem; color:#4e4543;">De rechter twee (B en C) zijn duidelijk warmer dan het huidige koele roze-wit. C is het meest herkenbaar warm, B is een middenweg.</p>
+
+<!-- Text color comparison -->
+<div class="section-title">Tekstkleur — huidig zwart vs. donkerbruin</div>
+<div class="bg-swatch" style="grid-template-columns: repeat(2, 1fr); max-width:700px;">
+    <div class="bg-card" style="background:#F7EFE6; color:#1d1b1b;">
+        <strong style="font-family:'Playfair Display',serif;">HUIDIG — Zwart</strong>
+        <p style="margin-top:8px; font-size:0.85rem; color:#1d1b1b;">#1d1b1b</p>
+        <p style="margin-top:12px; font-size:0.9rem; line-height:1.7;">Kracht, Rust & Stijl. Deze tekst is bijna puur zwart. Op een warme achtergrond kan dit te hard overkomen.</p>
+        <a href="#" style="color:#1d1b1b; text-decoration:underline;">Een link in zwart</a>
+    </div>
+    <div class="bg-card" style="background:#F7EFE6; color:#2D1F1B;">
+        <strong style="font-family:'Playfair Display',serif;">NIEUW — Donkerbruin</strong>
+        <p style="margin-top:8px; font-size:0.85rem; color:#2D1F1B;">#2D1F1B</p>
+        <p style="margin-top:12px; font-size:0.9rem; line-height:1.7;">Kracht, Rust & Stijl. Deze tekst is diep warm bruin. Zacht op het oog en past bij een warme sfeer.</p>
+        <a href="#" style="color:#2D1F1B; text-decoration:underline;">Een link in donkerbruin</a>
+    </div>
+</div>
+<p style="text-align:center; max-width:600px; margin:0 auto 48px; font-size:0.85rem; color:#4e4543;">Het verschil is subtiel maar voelbaar: donkerbruin (#2D1F1B) is minder hard dan zwart (#1d1b1b) op een warme achtergrond.</p>
+
+<!-- Accent options -->
+<div class="section-title">Accentkleuren (in plaats van fel roze #FF007F)</div>
+
+<div class="grid">
+    <!-- Option A: Terra -->
+    <div class="card" style="background:#F7EFE6;">
+        <span class="label" style="color:#A85030;">Optie A — Oranje / Terra</span>
+        <div class="swatch" style="background:#D4653B; color:#fff;">#D4653B</div>
+        <div class="swatch" style="background:#A85030; color:#fff; font-size:0.75rem;">hover #A85030</div>
+        <div class="fake-nav" style="background:#EDE3D6; color:#2D1F1B;">
+            HOME &nbsp; AANBOD &nbsp; <span style="color:#D4653B;">TARIEVEN</span> &nbsp; CONTACT
+        </div>
+        <div class="fake-text heading" style="color:#2D1F1B;">Kracht, Rust & Stijl</div>
+        <div class="fake-text" style="color:#4e4543;">Warm, aards, energiek. Goed voor een Pilates-studio met kracht.</div>
+        <a href="#" class="btn" style="background:#D4653B;">BOEK PROEFLES</a>
+    </div>
+
+    <!-- Option B: Oker -->
+    <div class="card" style="background:#F7EFE6;">
+        <span class="label" style="color:#9A7530;">Optie B — Oker / Geel</span>
+        <div class="swatch" style="background:#C4953A; color:#fff;">#C4953A</div>
+        <div class="swatch" style="background:#9A7530; color:#fff; font-size:0.75rem;">hover #9A7530</div>
+        <div class="fake-nav" style="background:#EDE3D6; color:#2D1F1B;">
+            HOME &nbsp; AANBOD &nbsp; <span style="color:#C4953A;">TARIEVEN</span> &nbsp; CONTACT
+        </div>
+        <div class="fake-text heading" style="color:#2D1F1B;">Kracht, Rust & Stijl</div>
+        <div class="fake-text" style="color:#4e4543;">Zonnig, elegant, uniek. Scandinavisch goud.</div>
+        <a href="#" class="btn" style="background:#C4953A;">BOEK PROEFLES</a>
+    </div>
+
+    <!-- Option C: Blush -->
+    <div class="card" style="background:#F7EFE6;">
+        <span class="label" style="color:#B88888;">Optie C — Blush roze</span>
+        <div class="swatch" style="background:#D4A5A5; color:#fff;">#D4A5A5</div>
+        <div class="swatch" style="background:#B88888; color:#fff; font-size:0.75rem;">hover #B88888</div>
+        <div class="fake-nav" style="background:#EDE3D6; color:#2D1F1B;">
+            HOME &nbsp; AANBOD &nbsp; <span style="color:#D4A5A5;">TARIEVEN</span> &nbsp; CONTACT
+        </div>
+        <div class="fake-text heading" style="color:#2D1F1B;">Kracht, Rust & Stijl</div>
+        <div class="fake-text" style="color:#4e4543;">Zacht, spa-achtig, elegant. Past naadloos.</div>
+        <a href="#" class="btn" style="background:#D4A5A5;">BOEK PROEFLES</a>
+    </div>
+</div>
+
+<div style="max-width:700px; margin:60px auto 0; text-align:center; color:#4e4543; font-size:0.9rem;">
+    <p><strong>Tip:</strong> Kijk vooral naar de knoppen en links — dat is waar je de accentkleur het meeste ziet.</p>
+</div>
+
+</body>
+</html>

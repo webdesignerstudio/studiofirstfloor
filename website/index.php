@@ -84,28 +84,28 @@ include 'inc/nav.php';
                 <p style="max-width: 500px; margin: 0 auto;">Blijf op de hoogte van nieuwe lessen, sfeerbeelden en een kijkje achter de schermen bij Studio First Floor.</p>
             </div>
             <div class="instagram-grid reveal">
-                <a href="https://instagram.com/studiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
                     <img src="img/studio-1.jpg" alt="Studio First Floor">
                     <div class="ig-overlay">
                         <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </div>
                 </a>
-                <a href="https://instagram.com/studiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
                     <img src="img/studio-2.jpg" alt="Pilates les">
                     <div class="ig-overlay">
                         <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </div>
                 </a>
-                <a href="https://instagram.com/studiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
                     <img src="img/studio-3.jpg" alt="Studio sfeer">
                     <div class="ig-overlay">
                         <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                     </div>
                 </a>
             </div>
-            <a href="https://instagram.com/studiofirstfloor" target="_blank" rel="noopener" class="instagram-cta">
+            <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-cta">
                 <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                @studiofirstfloor
+                @pilatesstudiofirstfloor
             </a>
         </div>
     </section>
