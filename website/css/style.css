@@ -1,20 +1,20 @@
 /* ============================================
    STITCH 2 — Serene Strength
    Playfair Display + Manrope
-   Sharp geometry, hot pink accents, zero rounding
+   Sharp geometry, warm gold accents, zero rounding
    ============================================ */
 
 :root {
-    --bg: #fef8f7;
-    --surface: #f2edec;
-    --surface-high: #ece7e6;
-    --surface-highest: #e6e1e0;
-    --on-surface: #1d1b1b;
+    --bg: #F7EFE6;
+    --surface: #F0E8E0;
+    --surface-high: #E8E0D8;
+    --surface-highest: #E0D8D0;
+    --on-surface: #2B2B2B;
     --on-surface-variant: #4e4543;
     --taupe-brown: #735D52;
-    --hot-pink: #FF007F;
-    --secondary: #b60055;
-    --muted-rose: #C5A8A4;
+    --hot-pink: #C4953A;
+    --secondary: #9A7530;
+    --muted-rose: #D4A5A5;
     --charcoal: #1A1A1A;
     --primary: #665c5b;
     --primary-container: #f9eae8;
