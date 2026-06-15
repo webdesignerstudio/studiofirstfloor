@@ -8,6 +8,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="site.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="mask-icon" href="/favicon.svg" color="#C4953A">
 <?php
 $canonical = isset($canonicalUrl) ? $canonicalUrl : 'https://studiofirstfloor.nl/' . basename($_SERVER['PHP_SELF']);
 $desc = isset($pageDescription) ? $pageDescription : "Studio First Floor — Pilates Studio. Kracht, Rust & Stijl in 's Gravenmoer.";
