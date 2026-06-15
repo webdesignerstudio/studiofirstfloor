@@ -65,12 +65,37 @@ include 'inc/nav.php';
                 <div class="bento-card">
                     <h3>Basic Pilates</h3>
                     <p>De perfecte start voor beginners. Basisprincipes in een rustig tempo voor alle niveaus.</p>
-                    <a href="aanbod.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <h3>Klassiek Pilates</h3>
+                    <p>De originele methode met strakke sequenties, klassieke oefeningen en focus op controle.</p>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Flow Pilates</h3>
                     <p>Vloeiende bewegingen met focus op flexibiliteit, coördinatie en een krachtige core.</p>
-                    <a href="aanbod.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <h3>Power Pilates</h3>
+                    <p>Intensief, meer weerstand, sneller tempo. Voor wie zijn grenzen wil verleggen.</p>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <h3>Early Bird Pilates</h3>
+                    <p>Start je dag energiek met een ochtendles. Beweging en focus voor de rest van de dag.</p>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <h3>Personal Pilates</h3>
+                    <p>1-op-1 sessie op aanvraag, volledig afgestemd op jouw doelen.</p>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                </div>
+                <div class="bento-card">
+                    <h3>Duo Pilates</h3>
+                    <p>Train met z'n tweeën op aanvraag. Gezelligheid én gerichte aandacht.</p>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
             </div>
         </div>
