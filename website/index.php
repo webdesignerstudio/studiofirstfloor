@@ -63,13 +63,11 @@ include 'inc/nav.php';
             </div>
             <div class="bento-grid reveal">
                 <div class="bento-card">
-                    <div class="icon-box">&#9733;</div>
                     <h3>Basic Pilates</h3>
                     <p>De perfecte start voor beginners. Basisprincipes in een rustig tempo voor alle niveaus.</p>
                     <a href="aanbod.php" class="card-link">LEES MEER <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
-                    <div class="icon-box">&#9679;</div>
                     <h3>Flow Pilates</h3>
                     <p>Vloeiende bewegingen met focus op flexibiliteit, coördinatie en een krachtige core.</p>
                     <a href="aanbod.php" class="card-link">LEES MEER <span>&rarr;</span></a>
