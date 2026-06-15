@@ -171,7 +171,7 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(254, 248, 247, 0.4);
+    background: rgba(0, 0, 0, 0.45);
 }
 
 .hero-content {
@@ -183,13 +183,16 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
 
 .hero-content h1 {
     margin-bottom: 1.5rem;
+    color: var(--white);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .hero-content p {
     font-size: 1.1rem;
-    color: var(--on-surface);
+    color: var(--white);
     max-width: 500px;
     margin: 0 auto 2rem;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
 }
 
 .btn-hot {
@@ -828,8 +831,8 @@ section { padding: var(--section-gap) 0; }
     right: 0;
     background: var(--charcoal);
     color: var(--white);
-    padding: 10px 16px;
-    font-size: 12px;
+    padding: 14px 24px;
+    font-size: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -844,9 +847,9 @@ section { padding: var(--section-gap) 0; }
     background: var(--hot-pink);
     color: var(--white);
     border: none;
-    padding: 6px 14px;
+    padding: 8px 18px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     cursor: pointer;
     flex-shrink: 0;
