@@ -25,8 +25,8 @@ $diensten = $cfg['diensten'] ?? [];
 
     <section style="padding-top: 0;">
         <div class="container">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;" class="reveal">
-                <div style="padding: 60px; background-color: var(--surface); border-right: 1px solid rgba(115, 93, 82, 0.1);">
+            <div class="contact-grid reveal">
+                <div class="contact-info">
                     <span class="label-caps" style="color: var(--taupe-brown); margin-bottom: 24px; display: block;">GEGEVENS</span>
                     <h3 style="margin-bottom: 2rem;">Direct contact</h3>
 
@@ -56,7 +56,7 @@ $diensten = $cfg['diensten'] ?? [];
                     </div>
                 </div>
 
-                <div style="padding: 60px; background-color: var(--white);">
+                <div class="contact-form-wrap">
                     <span class="label-caps" style="color: var(--taupe-brown); margin-bottom: 24px; display: block;">FORMULIER</span>
                     <h3 style="margin-bottom: 2rem;">Stuur een bericht</h3>
 

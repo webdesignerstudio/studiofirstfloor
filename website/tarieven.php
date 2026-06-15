@@ -77,7 +77,7 @@ include 'inc/nav.php';
                     </div>
                     <h2>Persoonlijke training</h2>
                 </div>
-                <div class="pricing-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 700px; margin: 0 auto;">
+                <div class="pricing-grid pricing-grid-center-2">
                     <div class="pricing-card">
                         <h3>Personal Pilates</h3>
                         <p class="price">Op aanvraag</p>

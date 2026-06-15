@@ -25,7 +25,8 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; border-radius: 0 !important; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+body { overflow-x: hidden; }
 
 body {
     font-family: 'Manrope', sans-serif;
@@ -300,6 +301,21 @@ section { padding: var(--section-gap) 0; }
 
 .intro-link:hover { color: var(--secondary); }
 
+/* Contact Grid */
+.contact-grid { display: grid; grid-template-columns: 1fr; gap: 0; }
+.contact-info { padding: 32px 20px; background-color: var(--surface); border-bottom: 1px solid rgba(115, 93, 82, 0.1); }
+.contact-form-wrap { padding: 32px 20px; background-color: var(--white); }
+
+@media (min-width: 768px) {
+    .contact-grid { grid-template-columns: 1fr 1fr; }
+    .contact-info { padding: 60px; border-right: 1px solid rgba(115, 93, 82, 0.1); border-bottom: none; }
+    .contact-form-wrap { padding: 60px; }
+}
+
+/* Pricing Grid Center */
+.pricing-grid-center-2 { display: grid; grid-template-columns: 1fr; max-width: 700px; margin: 0 auto; }
+@media (min-width: 768px) { .pricing-grid-center-2 { grid-template-columns: repeat(2, 1fr); } }
+
 @media (min-width: 768px) { .intro-grid { grid-template-columns: 1fr 1fr; } }
 
 /* Bento Services — Featured Grid */
@@ -455,13 +471,13 @@ section { padding: var(--section-gap) 0; }
 
 .footer-contact p {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     margin-bottom: 8px;
     font-size: 0.9rem;
 }
 
-.footer-contact .icon { font-size: 1rem; }
+.footer-contact .icon { font-size: 1rem; line-height: 1.4; }
 
 .footer-nav {
     display: flex;
