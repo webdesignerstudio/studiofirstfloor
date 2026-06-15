@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <img src="img/logo_horizontal.svg" alt="Studio First Floor" class="footer-logo">
+                    <img src="img/logo_horizontal_transparent.svg" alt="Studio First Floor" class="footer-logo">
                     <div class="footer-contact">
                         <p><span class="icon">&#128205;</span> Emmalaan 1F, 5109 TA 's Gravenmoer</p>
                         <p><span class="icon">&#9742;</span> 06 375 282 38</p>
