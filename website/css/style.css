@@ -446,9 +446,9 @@ section { padding: var(--section-gap) 0; }
 }
 
 .footer-brand .footer-logo {
-    height: 48px;
+    height: 72px;
     width: auto;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .footer-brand p { margin-bottom: 1.5rem; max-width: 300px; }
