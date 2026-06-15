@@ -30,7 +30,7 @@ include 'inc/nav.php';
                     <div class="image-bg"></div>
                     <picture>
                         <source srcset="img/studio-3.webp" type="image/webp">
-                        <img src="img/studio-3.jpg" alt="Pilates apparatuur" width="1080" height="1080" loading="lazy">
+                        <img src="img/studio-3.jpg" alt="Persoonlijke pilates begeleiding" width="1080" height="1080" loading="lazy">
                     </picture>
                 </div>
                 <div class="intro-content">
