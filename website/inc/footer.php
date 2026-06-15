@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>STUDIO FIRST FLOOR</h3>
+                    <img src="img/logo_transparent.svg" alt="Studio First Floor" class="footer-logo">
                     <p>Een knusse pilatesstudio, maximaal 8 personen per les.</p>
                     <div class="footer-contact">
                         <p><span class="icon">&#128205;</span> Emmalaan 1F, 5109 TA 's Gravenmoer</p>

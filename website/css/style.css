@@ -445,12 +445,9 @@ section { padding: var(--section-gap) 0; }
     gap: 48px;
 }
 
-.footer-brand h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+.footer-brand .footer-logo {
+    height: 48px;
+    width: auto;
     margin-bottom: 1rem;
 }
 
