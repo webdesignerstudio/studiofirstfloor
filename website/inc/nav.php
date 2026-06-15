@@ -1,10 +1,7 @@
     <header class="site-header" id="siteHeader">
         <div class="container header-inner">
             <a href="index.php" class="logo">
-                <picture>
-                    <source srcset="img/logo.webp" type="image/webp">
-                    <img src="img/logo.jpg" alt="Studio First Floor logo" width="120" height="120" fetchpriority="high">
-                </picture>
+                <img src="img/logo_transparent.svg" alt="Studio First Floor logo" width="120" height="73" fetchpriority="high">
             </a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu openen">
                 <span></span>

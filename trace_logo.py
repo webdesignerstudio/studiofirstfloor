@@ -228,7 +228,7 @@ def main():
     text_d = loops_to_d(text_loops)
     silhouette_d = loops_to_d(silhouette_loops)
     
-    # Write SVG
+    # Write master print SVG (with solid background and 20px padding)
     with open(svg_path, "w") as f:
         f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
         f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{view_x} {view_y} {view_w} {view_h}" width="{view_w}" height="{view_h}">\n')
@@ -238,8 +238,34 @@ def main():
         # Draw text second (foreground layer)
         f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{text_d}" />\n')
         f.write(f'</svg>\n')
-        
-    print(f"SVG saved to {svg_path}")
+    print(f"Master SVG saved to {svg_path}")
+
+    # Write web versions with tight padding (5px) and transparent backgrounds
+    web_padding = 5
+    web_view_x = min_x - web_padding
+    web_view_y = min_y - web_padding
+    web_view_w = (max_x - min_x) + 2 * web_padding
+    web_view_h = (max_y - min_y) + 2 * web_padding
+
+    # 1. logo_transparent.svg (transparent background, standard brand colors)
+    transparent_path = "afbeeldingen/logo_transparent.svg"
+    with open(transparent_path, "w") as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{web_view_x} {web_view_y} {web_view_w} {web_view_h}" width="{web_view_w}" height="{web_view_h}">\n')
+        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{silhouette_d}" />\n')
+        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{text_d}" />\n')
+        f.write(f'</svg>\n')
+    print(f"Transparent SVG saved to {transparent_path}")
+
+    # 2. logo_white.svg (transparent background, all-white for dark headers/overlays)
+    white_path = "afbeeldingen/logo_white.svg"
+    with open(white_path, "w") as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{web_view_x} {web_view_y} {web_view_w} {web_view_h}" width="{web_view_w}" height="{web_view_h}">\n')
+        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" opacity="0.4" d="{silhouette_d}" />\n')
+        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" d="{text_d}" />\n')
+        f.write(f'</svg>\n')
+    print(f"White SVG saved to {white_path}")
 
 if __name__ == "__main__":
     main()
