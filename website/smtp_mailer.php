@@ -198,7 +198,7 @@ function bouw_offerte_html(
     $dienst_rij = '';
     if (!empty($dienst_label_safe)) {
         $dienst_rij = <<<ROW
-            <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;">
+            <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D8;">
               <p style="margin:0;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">Dienst</p>
               <p style="margin:4px 0 0;font-size:14px;color:#111;">{$dienst_label_safe}</p>
             </td></tr>
@@ -210,7 +210,7 @@ ROW;
         $bericht_rij = <<<ROW
             <tr><td style="padding:10px 0;">
               <p style="margin:0;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">Bericht</p>
-              <p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.7;background:#f9f9f9;padding:16px;border-radius:8px;border-left:3px solid {$primair};">{$bericht_safe}</p>
+              <p style="margin:8px 0 0;font-size:14px;color:#333;line-height:1.7;background:#F0E8E0;padding:16px;border-radius:8px;border-left:3px solid {$primair};">{$bericht_safe}</p>
             </td></tr>
 ROW;
     }
@@ -219,8 +219,8 @@ ROW;
 <!DOCTYPE html>
 <html lang="nl">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:30px 15px;">
+<body style="margin:0;padding:0;background:#F7EFE6;font-family:Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#F7EFE6;padding:30px 15px;">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
         <tr><td style="background:{$header_bg};padding:30px 40px;">
@@ -229,15 +229,15 @@ ROW;
         </td></tr>
         <tr><td style="padding:35px 40px;">
           <table width="100%" cellpadding="0" cellspacing="0">
-            <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;">
+            <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D8;">
               <p style="margin:0;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">Naam</p>
               <p style="margin:4px 0 0;font-size:16px;font-weight:700;color:#111;">{$naam_safe}</p>
             </td></tr>
-            <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;">
+            <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D8;">
               <p style="margin:0;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">Telefoon</p>
               <p style="margin:4px 0 0;font-size:16px;font-weight:700;color:{$tel_fg};">{$telefoon_safe}</p>
             </td></tr>
-            <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;">
+            <tr><td style="padding:10px 0;border-bottom:1px solid #E8E0D8;">
               <p style="margin:0;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">E-mail</p>
               <p style="margin:4px 0 0;font-size:14px;color:#111;">{$email_safe}</p>
             </td></tr>
@@ -252,7 +252,7 @@ ROW;
             </tr>
           </table>
         </td></tr>
-        <tr><td style="background:#f9f9f9;padding:20px 40px;border-top:1px solid #f0f0f0;">
+        <tr><td style="background:#F0E8E0;padding:20px 40px;border-top:1px solid #E8E0D8;">
           <p style="margin:0;font-size:11px;color:#aaa;text-align:center;">{$bedrijf} &mdash; {$locatie}</p>
         </td></tr>
       </table>
@@ -296,7 +296,7 @@ function bouw_bevestiging_html(
     $bericht_block = '';
     if (!empty($bericht_safe)) {
         $bericht_block = <<<MSG
-            <div style="background:#f9f9f9;border-radius:8px;padding:20px;margin:20px 0;border-left:3px solid {$primair};">
+            <div style="background:#F0E8E0;border-radius:8px;padding:20px;margin:20px 0;border-left:3px solid {$primair};">
               <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">Uw bericht</p>
               <p style="margin:0;font-size:14px;color:#333;line-height:1.6;">{$bericht_safe}</p>
             </div>
@@ -306,7 +306,7 @@ MSG;
     $dienst_block = '';
     if (!empty($dienst_label_safe)) {
         $dienst_block = <<<SRV
-          <div style="background:#f9f9f9;border-radius:8px;padding:20px;margin:20px 0;border-left:3px solid {$primair};">
+          <div style="background:#F0E8E0;border-radius:8px;padding:20px;margin:20px 0;border-left:3px solid {$primair};">
             <p style="margin:0 0 6px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#999;font-weight:700;">Uw aanvraag</p>
             <p style="margin:0 0 4px;font-size:14px;font-weight:700;color:#111;">{$dienst_label_safe}</p>
           </div>
@@ -326,8 +326,8 @@ TEL;
 <!DOCTYPE html>
 <html lang="nl">
 <head><meta charset="UTF-8"></head>
-<body style="margin:0;padding:0;background:#f4f4f4;font-family:Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;padding:30px 15px;">
+<body style="margin:0;padding:0;background:#F7EFE6;font-family:Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#F7EFE6;padding:30px 15px;">
     <tr><td align="center">
       <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border-radius:12px;overflow:hidden;">
         <tr><td style="background:{$header_bg};padding:30px 40px;">
@@ -342,7 +342,7 @@ TEL;
           {$tel_link}
           <p style="font-size:14px;color:#555;margin-top:20px;">Met vriendelijke groet,<br><strong>{$bedrijf}</strong></p>
         </td></tr>
-        <tr><td style="background:#f9f9f9;padding:15px 40px;border-top:1px solid #f0f0f0;">
+        <tr><td style="background:#F0E8E0;padding:15px 40px;border-top:1px solid #E8E0D8;">
           <p style="margin:0;font-size:11px;color:#aaa;text-align:center;">{$locatie} &mdash; {$email_fb}</p>
         </td></tr>
       </table>
