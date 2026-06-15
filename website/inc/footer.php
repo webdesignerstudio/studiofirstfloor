@@ -3,7 +3,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3>STUDIO FIRST FLOOR</h3>
-                    <p>Pilates Studio in een private sanctuary op de eerste verdieping.</p>
+                    <p>Een knusse pilatesstudio, maximaal 8 personen per les.</p>
                     <div class="footer-contact">
                         <p><span class="icon">&#128205;</span> Emmalaan 1F, 5109 TA 's Gravenmoer</p>
                         <p><span class="icon">&#9742;</span> 06 375 282 38</p>
