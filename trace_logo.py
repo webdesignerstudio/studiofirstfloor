@@ -32,12 +32,10 @@ def rdp(points, epsilon):
         return [points[0], points[end]]
 
 def trace_component(comp_pixels, width, height, epsilon=0.5):
-    # Create binary grid
     fg = [[False] * (width + 2) for _ in range(height + 2)]
     for cx, cy in comp_pixels:
         fg[cy+1][cx+1] = True
         
-    # Generate directed edges
     adj = {}
     def add_edge(u, v):
         if u not in adj:
@@ -56,7 +54,6 @@ def trace_component(comp_pixels, width, height, epsilon=0.5):
                 if not fg[y][x-1]:
                     add_edge((x-1, y), (x-1, y-1))
                     
-    # Trace loops
     loops = []
     edges_map = {u: list(vs) for u, vs in adj.items()}
     
@@ -77,7 +74,6 @@ def trace_component(comp_pixels, width, height, epsilon=0.5):
                     loop.append(loop[0])
                 loops.append(loop)
                 
-    # Filter and simplify
     simplified = []
     for loop in loops:
         xs = [p[0] for p in loop]
@@ -89,15 +85,36 @@ def trace_component(comp_pixels, width, height, epsilon=0.5):
             
     return simplified
 
+def translate_loops(loops, dx, dy):
+    new_loops = []
+    for loop in loops:
+        new_loop = [(p[0] + dx, p[1] + dy) for p in loop]
+        new_loops.append(new_loop)
+    return new_loops
+
+def get_bbox(loops):
+    xs = [p[0] for l in loops for p in l]
+    ys = [p[1] for l in loops for p in l]
+    return min(xs), max(xs), min(ys), max(ys)
+
+def loops_to_d(loops):
+    path_data = []
+    for loop in loops:
+        path_str = f"M {loop[0][0]:.1f} {loop[0][1]:.1f}"
+        for p in loop[1:]:
+            path_str += f" L {p[0]:.1f} {p[1]:.1f}"
+        path_str += " Z"
+        path_data.append(path_str)
+    return " ".join(path_data)
+
 def main():
     image_path = "afbeeldingen/logo.jpeg"
-    svg_path = "afbeeldingen/logo.svg"
     
     print(f"Loading {image_path}...")
     img = Image.open(image_path).convert('L')
     width, height = img.size
     
-    # 1. Extract text pixels at threshold 175
+    # 1. Extract text and sub-components at threshold 175
     visited175 = set()
     fg175 = set()
     for y in range(height):
@@ -122,17 +139,28 @@ def main():
                         queue.append((nx, ny))
             components175.append(comp)
             
-    text_pixels = []
+    studio_pixels = []
+    first_floor_pixels = []
+    pilates_coaching_pixels = []
+    
     for comp in components175:
         xs = [pt[0] for pt in comp]
         ys = [pt[1] for pt in comp]
         min_x, max_x = min(xs), max(xs)
         min_y, max_y = min(ys), max(ys)
-        # Bounding box of silhouette fragment
+        
+        # Filter out silhouette fragment at threshold 175
         if min_x >= 630 and max_x <= 870 and min_y >= 540 and max_y <= 680 and len(comp) > 100:
-            print(f"Filtering out silhouette fragment from text at threshold 175: size={len(comp)}, bbox=X:{min_x}-{max_x}, Y:{min_y}-{max_y}")
+            print(f"Filtering out silhouette fragment from text: size={len(comp)}, bbox=X:{min_x}-{max_x}, Y:{min_y}-{max_y}")
+            continue
+            
+        # Classify by Y ranges
+        if min_y > 800:
+            pilates_coaching_pixels.extend(comp)
+        elif max_y < 530:
+            studio_pixels.extend(comp)
         else:
-            text_pixels.extend(comp)
+            first_floor_pixels.extend(comp)
             
     # 2. Extract silhouette pixels at threshold 240
     visited240 = set()
@@ -166,12 +194,11 @@ def main():
         min_x, max_x = min(xs), max(xs)
         min_y, max_y = min(ys), max(ys)
         
-        # Silhouette top part (above STUDIO) or bottom part (below STUDIO)
         is_sil_top = (min_x >= 540 and max_x <= 850 and min_y >= 260 and max_y <= 530 and len(comp) > 1000)
         is_sil_bottom = (min_x >= 630 and max_x <= 870 and min_y >= 540 and max_y <= 680 and len(comp) > 500)
         
         if is_sil_top or is_sil_bottom:
-            print(f"Found silhouette component at threshold 240: size={len(comp)}, bbox=X:{min_x}-{max_x}, Y:{min_y}-{max_y}")
+            print(f"Found silhouette component: size={len(comp)}, bbox=X:{min_x}-{max_x}, Y:{min_y}-{max_y}")
             silhouette_pixels.extend(comp)
             
     # Dilate silhouette pixels to prevent sub-pixel rendering loss
@@ -185,87 +212,123 @@ def main():
                     if 0 <= nx < width and 0 <= ny < height:
                         dilated_silhouette.add((nx, ny))
                         
-    print(f"Tracing {len(text_pixels)} text pixels...")
-    text_loops = trace_component(text_pixels, width, height, epsilon=0.5)
+    print("Tracing text components...")
+    studio_loops = trace_component(studio_pixels, width, height, epsilon=0.5)
+    first_floor_loops = trace_component(first_floor_pixels, width, height, epsilon=0.5)
+    pilates_coaching_loops = trace_component(pilates_coaching_pixels, width, height, epsilon=0.5)
     
-    print(f"Tracing {len(dilated_silhouette)} dilated silhouette pixels...")
+    print("Tracing silhouette loops...")
     silhouette_loops = trace_component(dilated_silhouette, width, height, epsilon=0.5)
     
-    # Calculate global bounding box for viewBox
-    all_xs = []
-    all_ys = []
-    for loop in text_loops + silhouette_loops:
-        for p in loop:
-            all_xs.append(p[0])
-            all_ys.append(p[1])
-            
-    if not all_xs:
-        print("No loops found!")
-        return
-        
-    min_x, max_x = min(all_xs), max(all_xs)
-    min_y, max_y = min(all_ys), max(all_ys)
+    # -------------------------------------------------------------
+    # GENERATE VERTICAL LOGO VARIATIONS (STACKED)
+    # -------------------------------------------------------------
+    print("Generating stacked logo variations...")
+    # Stacked logo includes: silhouette, studio, first_floor, pilates_coaching
+    all_vertical_loops = silhouette_loops + studio_loops + first_floor_loops + pilates_coaching_loops
+    v_x1, v_x2, v_y1, v_y2 = get_bbox(all_vertical_loops)
     
     padding = 20
-    view_x = min_x - padding
-    view_y = min_y - padding
-    view_w = (max_x - min_x) + 2 * padding
-    view_h = (max_y - min_y) + 2 * padding
+    v_view_x = v_x1 - padding
+    v_view_y = v_y1 - padding
+    v_view_w = (v_x2 - v_x1) + 2 * padding
+    v_view_h = (v_y2 - v_y1) + 2 * padding
     
-    print(f"SVG Bounding Box: {min_x},{min_y} to {max_x},{max_y} (viewBox={view_x} {view_y} {view_w} {view_h})")
+    v_sil_d = loops_to_d(silhouette_loops)
+    v_text_d = loops_to_d(studio_loops + first_floor_loops + pilates_coaching_loops)
     
-    # Generate SVG path strings
-    def loops_to_d(loops):
-        path_data = []
-        for loop in loops:
-            path_str = f"M {loop[0][0]} {loop[0][1]}"
-            for p in loop[1:]:
-                path_str += f" L {p[0]} {p[1]}"
-            path_str += " Z"
-            path_data.append(path_str)
-        return " ".join(path_data)
+    # logo.svg (original print version)
+    with open("afbeeldingen/logo.svg", "w") as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{v_view_x} {v_view_y} {v_view_w} {v_view_h}" width="{v_view_w}" height="{v_view_h}">\n')
+        f.write(f'  <rect x="{v_view_x}" y="{v_view_y}" width="{v_view_w}" height="{v_view_h}" fill="#FCF2F0" />\n')
+        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{v_sil_d}" />\n')
+        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{v_text_d}" />\n')
+        f.write(f'</svg>\n')
         
-    text_d = loops_to_d(text_loops)
-    silhouette_d = loops_to_d(silhouette_loops)
+    # logo_transparent.svg
+    with open("afbeeldingen/logo_transparent.svg", "w") as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{v_view_x} {v_view_y} {v_view_w} {v_view_h}" width="{v_view_w}" height="{v_view_h}">\n')
+        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{v_sil_d}" />\n')
+        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{v_text_d}" />\n')
+        f.write(f'</svg>\n')
+        
+    # logo_white.svg
+    with open("afbeeldingen/logo_white.svg", "w") as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{v_view_x} {v_view_y} {v_view_w} {v_view_h}" width="{v_view_w}" height="{v_view_h}">\n')
+        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" opacity="0.4" d="{v_sil_d}" />\n')
+        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" d="{v_text_d}" />\n')
+        f.write(f'</svg>\n')
+        
+    # -------------------------------------------------------------
+    # GENERATE HORIZONTAL LOGO VARIATIONS (LANDSCAPE)
+    # -------------------------------------------------------------
+    print("Generating horizontal logo variations...")
+    # Get original bounds
+    sil_x1, sil_x2, sil_y1, sil_y2 = get_bbox(silhouette_loops)
+    std_x1, std_x2, std_y1, std_y2 = get_bbox(studio_loops)
+    ff_x1, ff_x2, ff_y1, ff_y2 = get_bbox(first_floor_loops)
     
-    # Write master print SVG (with solid background and 20px padding)
-    with open(svg_path, "w") as f:
+    sil_w = sil_x2 - sil_x1
+    sil_h = sil_y2 - sil_y1
+    
+    # Translate silhouette to start at (0, 0)
+    h_sil_loops = translate_loops(silhouette_loops, -sil_x1, -sil_y1)
+    
+    # Positioning horizontal text
+    gap_x = 60
+    text_x = sil_w + gap_x  # Position on the right of the silhouette
+    
+    # Vertically center text block (height = std_h + 44 + ff_h = 48 + 44 + 190 = 282)
+    # relative to the silhouette height of 389. Center Y offset = (389 - 282)/2 = 53.5 -> 54
+    std_y_new = 54
+    ff_y_new = 54 + (std_y2 - std_y1) + 44
+    
+    # Left-align both text lines next to silhouette
+    h_std_loops = translate_loops(studio_loops, text_x - std_x1, std_y_new - std_y1)
+    h_ff_loops = translate_loops(first_floor_loops, text_x - ff_x1, ff_y_new - ff_y1)
+    
+    h_sil_d = loops_to_d(h_sil_loops)
+    h_std_d = loops_to_d(h_std_loops)
+    h_ff_d = loops_to_d(h_ff_loops)
+    h_text_d = f"{h_std_d} {h_ff_d}"
+    
+    # Calculate horizontal viewBox
+    h_padding = 20
+    h_view_x = -h_padding
+    h_view_y = -h_padding
+    h_view_w = sil_w + gap_x + (ff_x2 - ff_x1) + 2 * h_padding
+    h_view_h = sil_h + 2 * h_padding
+    
+    # Write horizontal files
+    # logo_horizontal.svg
+    with open("afbeeldingen/logo_horizontal.svg", "w") as f:
         f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
-        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{view_x} {view_y} {view_w} {view_h}" width="{view_w}" height="{view_h}">\n')
-        f.write(f'  <rect x="{view_x}" y="{view_y}" width="{view_w}" height="{view_h}" fill="#FCF2F0" />\n')
-        # Draw silhouette first (background layer)
-        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{silhouette_d}" />\n')
-        # Draw text second (foreground layer)
-        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{text_d}" />\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{h_view_x} {h_view_y} {h_view_w} {h_view_h}" width="{h_view_w}" height="{h_view_h}">\n')
+        f.write(f'  <rect x="{h_view_x}" y="{h_view_y}" width="{h_view_w}" height="{h_view_h}" fill="#FCF2F0" />\n')
+        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{h_sil_d}" />\n')
+        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{h_text_d}" />\n')
         f.write(f'</svg>\n')
-    print(f"Master SVG saved to {svg_path}")
-
-    # Write web versions with tight padding (5px) and transparent backgrounds
-    web_padding = 5
-    web_view_x = min_x - web_padding
-    web_view_y = min_y - web_padding
-    web_view_w = (max_x - min_x) + 2 * web_padding
-    web_view_h = (max_y - min_y) + 2 * web_padding
-
-    # 1. logo_transparent.svg (transparent background, standard brand colors)
-    transparent_path = "afbeeldingen/logo_transparent.svg"
-    with open(transparent_path, "w") as f:
+        
+    # logo_horizontal_transparent.svg
+    with open("afbeeldingen/logo_horizontal_transparent.svg", "w") as f:
         f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
-        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{web_view_x} {web_view_y} {web_view_w} {web_view_h}" width="{web_view_w}" height="{web_view_h}">\n')
-        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{silhouette_d}" />\n')
-        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{text_d}" />\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{h_view_x} {h_view_y} {h_view_w} {h_view_h}" width="{h_view_w}" height="{h_view_h}">\n')
+        f.write(f'  <path fill="#D8C1BB" fill-rule="evenodd" stroke="none" d="{h_sil_d}" />\n')
+        f.write(f'  <path fill="#745742" fill-rule="evenodd" stroke="none" d="{h_text_d}" />\n')
         f.write(f'</svg>\n')
-    print(f"Transparent SVG saved to {transparent_path}")
-
-    # 2. logo_white.svg (transparent background, all-white for dark headers/overlays)
-    white_path = "afbeeldingen/logo_white.svg"
-    with open(white_path, "w") as f:
+        
+    # logo_horizontal_white.svg
+    with open("afbeeldingen/logo_horizontal_white.svg", "w") as f:
         f.write(f'<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
-        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{web_view_x} {web_view_y} {web_view_w} {web_view_h}" width="{web_view_w}" height="{web_view_h}">\n')
-        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" opacity="0.4" d="{silhouette_d}" />\n')
-        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" d="{text_d}" />\n')
+        f.write(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{h_view_x} {h_view_y} {h_view_w} {h_view_h}" width="{h_view_w}" height="{h_view_h}">\n')
+        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" opacity="0.4" d="{h_sil_d}" />\n')
+        f.write(f'  <path fill="#FFFFFF" fill-rule="evenodd" stroke="none" d="{h_text_d}" />\n')
         f.write(f'</svg>\n')
-    print(f"White SVG saved to {white_path}")
+        
+    print("All vector logo variations generated successfully!")
 
 if __name__ == "__main__":
     main()
