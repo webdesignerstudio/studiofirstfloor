@@ -26,37 +26,72 @@ include 'inc/nav.php';
                 <div class="bento-card">
                     <h3>Basic Pilates</h3>
                     <p>De perfecte start voor beginners. Basisprincipes in een rustig tempo voor alle niveaus.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Klassiek Pilates</h3>
                     <p>De originele methode met strakke sequenties, klassieke oefeningen en focus op controle.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Flow Pilates</h3>
                     <p>Vloeiende bewegingen met focus op flexibiliteit, coördinatie en een krachtige core.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Power Pilates</h3>
                     <p>Intensief, meer weerstand, sneller tempo. Voor wie zijn grenzen wil verleggen.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Early Bird Pilates</h3>
                     <p>Start je dag energiek met een ochtendles. Beweging en focus voor de rest van de dag.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Personal Pilates</h3>
                     <p>1-op-1 sessie op aanvraag, volledig afgestemd op jouw doelen.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
                 </div>
                 <div class="bento-card">
                     <h3>Duo Pilates</h3>
                     <p>Train met z'n tweeën op aanvraag. Gezelligheid én gerichte aandacht.</p>
-                    <a href="contact.php" class="card-link">LEES MEER <span>&rarr;</span></a>
+                    <a href="contact.php" class="card-link">BOEK NU <span>&rarr;</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top: 0;">
+        <div class="container">
+            <div class="section-header reveal" style="margin-bottom: 40px;">
+                <div class="section-tag">
+                    <div class="line"></div>
+                    <span>FAQ</span>
+                    <div class="line"></div>
+                </div>
+                <h2>Veelgestelde vragen</h2>
+            </div>
+            <div class="faq-list reveal" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">Moet ik ervaring hebben om mee te kunnen doen?<span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Nee. Onze Basic Pilates is speciaal voor beginners. We bouwen stap voor stap op, zodat je op je eigen tempo de basisprincipes leert kennen.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Hoe groot zijn de groepen?<span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Maximaal 8 personen per les. Zo krijgt iedereen persoonlijke aandacht en feedback op zijn of haar houding.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Wat moet ik meenemen?<span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Comfortabele sportkleding is voldoende. Alle materialen zoals matjes, props en gewichten zijn in de studio aanwezig. Na de les kun je gebruikmaken van onze douche.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Kan ik een proefles doen?<span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Jazeker. Je eerste proefles is gratis. Zo kun je zelf ervaren of Pilates en onze studio bij jou passen.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Wat is het verschil tussen Flow en Power Pilates?<span class="faq-icon">+</span></div>
+                    <div class="faq-answer"><p>Flow Pilates richt zich op vloeiende bewegingen, flexibiliteit en coördinatie. Power Pilates is intensiever, met meer weerstand en een sneller tempo. Beide bouwen kracht op, maar op een andere manier.</p></div>
                 </div>
             </div>
         </div>
@@ -77,5 +112,18 @@ include 'inc/nav.php';
         </div>
     </section>
 </main>
+
+<script>
+(function(){
+    document.querySelectorAll('.faq-question').forEach(function(q){
+        q.addEventListener('click', function(){
+            var item = this.closest('.faq-item');
+            var wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+            if(!wasOpen) item.classList.add('open');
+        });
+    });
+})();
+</script>
 
 <?php include 'inc/footer.php'; ?>

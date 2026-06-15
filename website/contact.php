@@ -41,6 +41,11 @@ $diensten = $cfg['diensten'] ?? [];
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
+                        <span class="label-caps" style="color: var(--taupe-brown); display: block; margin-bottom: 8px;">WHATSAPP</span>
+                        <a href="https://wa.me/31637528238" target="_blank" rel="noopener" style="color: var(--hot-pink);">06 375 282 38</a>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
                         <span class="label-caps" style="color: var(--taupe-brown); display: block; margin-bottom: 8px;">ADRES</span>
                         <p style="margin: 0;">Emmalaan 1F<br>5109 TA 's Gravenmoer</p>
                     </div>

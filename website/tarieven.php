@@ -22,7 +22,7 @@ include 'inc/nav.php';
 
     <section style="padding-top: 0;">
         <div class="container">
-            <div class="pricing-grid reveal">
+            <div class="pricing-grid pricing-grid-center reveal">
                 <div class="pricing-card featured">
                     <h3>1× per week</h3>
                     <p class="price">€49,99<span> / maand</span></p>
