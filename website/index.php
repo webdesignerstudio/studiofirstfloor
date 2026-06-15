@@ -29,8 +29,8 @@ include 'inc/nav.php';
                 <div class="intro-image">
                     <div class="image-bg"></div>
                     <picture>
-                        <source srcset="img/studio-3.webp" type="image/webp">
-                        <img src="img/studio-3.jpg" alt="Persoonlijke pilates begeleiding" width="1080" height="1080" loading="lazy">
+                        <source srcset="img/studio-missie.webp" type="image/webp">
+                        <img src="img/studio-missie.jpg" alt="Persoonlijke pilates begeleiding" width="1080" height="1080" loading="lazy">
                     </picture>
                 </div>
                 <div class="intro-content">
