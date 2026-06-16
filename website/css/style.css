@@ -87,7 +87,7 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
     justify-content: space-between;
 }
 
-.logo img { height: 78px; width: auto; }
+.logo img { height: 70px; width: auto; }
 
 .main-nav ul {
     display: flex;
