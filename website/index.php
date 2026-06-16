@@ -149,6 +149,34 @@ include 'inc/nav.php';
         </div>
     </section>
 
+    <!-- Over Renate -->
+    <section style="background-color: var(--surface); border-top: 1px solid rgba(115, 93, 82, 0.1); border-bottom: 1px solid rgba(115, 93, 82, 0.1);">
+        <div class="container">
+            <div class="about-grid reveal">
+                <div class="about-content">
+                    <div class="section-tag" style="justify-content: flex-start;">
+                        <div class="line"></div>
+                        <span>OVER MIJ</span>
+                    </div>
+                    <h2>Hoi, ik ben Renate</h2>
+                    <p>Pilates is voor mij niet zomaar een workout — het is een manier van leven. Jaren geleden, toen ik op zoek was naar balans tussen werk en welzijn, ontdekte ik de kracht van bewuste beweging. Het was liefde op het eerste gezicht.</p>
+                    <p>Ik besloot mijn passie om te zetten in iets concreets: een plek waar kleinschaligheid, persoonlijke aandacht en kwaliteit centraal staan. Studio First Floor is mijn droom in vervulling.</p>
+                    <div class="about-quote">
+                        <p>"Iedereen verdient een moment voor zichzelf. Een plek waar je even alles loslaat en weer contact maakt met je lichaam. Dat is wat ik hier creëer."</p>
+                    </div>
+                    <p>Of je nu voor het eerst een mat uitrolt of al jaren ervaring hebt — hier voel je je thuis. Ik kijk ernaar uit om je te verwelkomen.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-bg"></div>
+                    <picture>
+                        <source srcset="img/placeholder-eigenaar.webp" type="image/webp">
+                        <img src="img/placeholder-eigenaar.jpg" alt="Renate Emmen - eigenaar Studio First Floor" width="800" height="1000" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Box -->
     <section>
         <div class="container">

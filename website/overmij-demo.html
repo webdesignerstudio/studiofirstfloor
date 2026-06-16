@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over Mij - Keuze Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background: #F7EFE6;
+            color: #2B2B2B;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1100px; margin: 0 auto; }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            text-align: center;
+            margin-bottom: 8px;
+            font-size: 2rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #4e4543;
+            margin-bottom: 60px;
+            font-size: 0.95rem;
+        }
+        .option-label {
+            display: inline-block;
+            background: #C4953A;
+            color: #fff;
+            padding: 6px 16px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .demo-block {
+            background: #fff;
+            border: 1px solid rgba(115,93,82,0.15);
+            margin-bottom: 60px;
+            padding: 0;
+        }
+        .demo-inner { padding: 48px; }
+
+        /* === OPTIE 1: Warm & Persoonlijk === */
+        .opt1-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .opt1-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+        .opt1-tag {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #735D52;
+            margin-bottom: 16px;
+        }
+        .opt1-tag .line {
+            display: inline-block;
+            width: 32px;
+            height: 1px;
+            background: #C4953A;
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+        .opt1-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .opt1-text p {
+            color: #4e4543;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        .opt1-quote {
+            border-left: 3px solid #C4953A;
+            padding-left: 20px;
+            margin: 24px 0;
+            font-style: italic;
+            color: #4e4543;
+        }
+
+        /* === OPTIE 2: Professioneel & Clean === */
+        .opt2-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .opt2-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .opt2-text p {
+            color: #4e4543;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        .opt2-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(115,93,82,0.15);
+        }
+        .opt2-stat h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: #C4953A;
+            margin-bottom: 4px;
+        }
+        .opt2-stat span {
+            font-size: 0.75rem;
+            color: #735D52;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .opt2-img img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+
+        /* === OPTIE 3: Storytelling / Magazine === */
+        .opt3-img {
+            position: relative;
+            height: 360px;
+            overflow: hidden;
+        }
+        .opt3-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .opt3-img::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.25);
+        }
+        .opt3-img h2 {
+            position: absolute;
+            bottom: 40px;
+            left: 48px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #fff;
+            z-index: 2;
+        }
+        .opt3-body {
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+        }
+        .opt3-body p {
+            color: #4e4543;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+        .opt3-highlight {
+            background: #F0E8E0;
+            padding: 24px;
+            margin: 24px 0 0;
+            border-left: 3px solid #C4953A;
+        }
+        .opt3-highlight p {
+            margin: 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .opt1-grid, .opt2-grid, .opt3-body {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            .opt1-img img, .opt2-img img { height: 360px; }
+            .opt2-stats { flex-direction: column; gap: 20px; }
+            .opt3-img h2 { font-size: 1.8rem; left: 24px; bottom: 24px; }
+            .demo-inner { padding: 32px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Over Mij — 3 Richtingen</h1>
+        <p class="subtitle">Klik op een foto om te vergroten. Kies de variant die het beste past bij Studio First Floor.</p>
+
+        <!-- === OPTIE 1: Warm & Persoonlijk === -->
+        <div class="demo-block">
+            <div class="option-label">Optie 1 — Warm & Persoonlijk</div>
+            <div class="opt1-grid">
+                <div class="opt1-img">
+                    <a href="img/placeholder-eigenaar.jpg" target="_blank">
+                        <img src="img/placeholder-eigenaar.jpg" alt="Placeholder eigenaar">
+                    </a>
+                </div>
+                <div class="opt1-text">
+                    <div class="opt1-tag"><span class="line"></span>OVER MIJ</div>
+                    <h2>Hoi, ik ben [Naam]</h2>
+                    <p>Vanaf de eerste keer dat ik Pilates ontdekte, wist ik: dit is wat ik wil delen. Na jarenlang werken in de commerciele wereld miste ik de verbinding — met mezelf, mijn lichaam, en met mensen op een dieper niveau.</p>
+                    <p>Studio First Floor is ontstaan uit die behoefte. Een plek waar je niet hoeft te presteren, maar waar je mag zijn. Waar kleinschaligheid geen luxe is, maar een bewuste keuze.</p>
+                    <div class="opt1-quote">
+                        "Pilates is voor mij geen workout. Het is een manier van leven."
+                    </div>
+                    <p>Ik begeleid je met aandacht, geduld en een flinke dosis enthousiasme. Of je nu nooit hebt gesport of al jaren bezig bent — hier voel je je thuis.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- === OPTIE 2: Professioneel & Clean === -->
+        <div class="demo-block">
+            <div class="option-label">Optie 2 — Professioneel & Clean</div>
+            <div class="opt2-grid">
+                <div class="opt2-text">
+                    <h2>[Naam] — Eigenaar & Instructeur</h2>
+                    <p>Met meer dan [X] jaar ervaring in klassieke en moderne Pilates-methodes, richt ik me op duurzame resultaten door persoonlijke aandacht en technische precisie.</p>
+                    <p>Mijn visie is simpel: beweging moet toegankelijk zijn. Dat begint met een kleine groep, een rustige omgeving en een instructeur die echt naar je kijkt.</p>
+                    <p>Bij Studio First Floor combineren we de principes van Joseph Pilates met een moderne, warme benadering. Geen rigiditeit, wel discipline. Geen massa, wel structuur.</p>
+                    <div class="opt2-stats">
+                        <div class="opt2-stat">
+                            <h4>500+</h4>
+                            <span>Sessies gegeven</span>
+                        </div>
+                        <div class="opt2-stat">
+                            <h4>[X]+</h4>
+                            <span>Jaar ervaring</span>
+                        </div>
+                        <div class="opt2-stat">
+                            <h4>100%</h4>
+                            <span>Passie & aandacht</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="opt2-img">
+                    <a href="img/placeholder-eigenaar.jpg" target="_blank">
+                        <img src="img/placeholder-eigenaar.jpg" alt="Placeholder eigenaar">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- === OPTIE 3: Storytelling / Magazine === -->
+        <div class="demo-block">
+            <div class="option-label">Optie 3 — Storytelling / Magazine</div>
+            <div class="opt3-img">
+                <a href="img/placeholder-eigenaar.jpg" target="_blank" style="display:block;width:100%;height:100%;">
+                    <img src="img/placeholder-eigenaar.jpg" alt="Placeholder eigenaar">
+                </a>
+                <h2>De studio begint bij mij</h2>
+            </div>
+            <div class="opt3-body">
+                <div>
+                    <p>Ik groeide op met dans en beweging, maar verloor die verbinding tijdens mijn studie en eerste baan. Mijn rug klaagde, mijn hoofd raasde, en ik wist dat er iets moest veranderen.</p>
+                    <p>Toen ik Pilates ontdekte, voelde het als thuiskomen. Niet alleen fysiek — ook mentaal. De concentratie, de ademhaling, de controle. Het was mindfulness in beweging.</p>
+                </div>
+                <div>
+                    <p>Na mijn certificering besloot ik: ik bouw geen sportschool. Ik bouw een thuis. Een plek waar maximaal 8 mensen samenkomen, waar iedereen gezien wordt, en waar je na de les niet weg wilt.</p>
+                    <div class="opt3-highlight">
+                        <p>"Ik geloof dat beweging begint met vertrouwen. Vertrouwen in je lichaam, in de ruimte, en in degene die je begeleidt. Dat is wat ik elke dag opnieuw aanbied."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p style="text-align:center; color:#735D52; font-size:0.85rem; margin-top:20px;">
+            Dit zijn placeholder-teksten. Na jouw keuze pas ik de tekst en foto aan.<br>
+            Wil je een mix van elementen? Laat het weten.
+        </p>
+    </div>
+</body>
+</html>

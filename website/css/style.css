@@ -318,6 +318,50 @@ section { padding: var(--section-gap) 0; }
 
 @media (min-width: 768px) { .intro-grid { grid-template-columns: 1fr 1fr; } }
 
+/* About Renate */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+    overflow: hidden;
+    order: -1;
+}
+
+.about-image .image-bg {
+    position: absolute;
+    inset: -16px;
+    background-color: var(--primary-container);
+    z-index: -1;
+}
+
+.about-image img { width: 100%; height: 500px; object-fit: cover; }
+
+.about-content h2 { margin-bottom: 1.5rem; }
+.about-content p { margin-bottom: 1.25rem; font-size: 1.05rem; }
+
+.about-quote {
+    border-left: 3px solid var(--hot-pink);
+    padding: 12px 0 12px 20px;
+    margin: 24px 0;
+}
+
+.about-quote p {
+    margin: 0;
+    font-style: italic;
+    color: var(--on-surface-variant);
+}
+
+@media (min-width: 768px) {
+    .about-grid { grid-template-columns: 1.1fr 1fr; }
+    .about-image { order: 2; }
+    .about-image img { height: 580px; }
+}
+
 /* Bento Services — Featured Grid */
 .bento-section { background-color: var(--surface); border-top: 1px solid rgba(115, 93, 82, 0.1); border-bottom: 1px solid rgba(115, 93, 82, 0.1); }
 
