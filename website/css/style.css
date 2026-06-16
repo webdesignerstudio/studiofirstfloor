@@ -87,7 +87,7 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
     justify-content: space-between;
 }
 
-.logo img { height: 72px; width: auto; }
+.logo img { height: 80px; width: auto; }
 
 .main-nav ul {
     display: flex;
@@ -506,7 +506,7 @@ section { padding: var(--section-gap) 0; }
 }
 
 .footer-brand .footer-logo {
-    height: 72px;
+    height: 80px;
     width: auto;
     margin-bottom: 1.5rem;
 }
