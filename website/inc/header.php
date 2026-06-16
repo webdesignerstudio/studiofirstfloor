@@ -8,10 +8,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
-    <link rel="shortcut icon" href="/favicon.ico?v=2">
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png?v=4">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png?v=4">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=4">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=4">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+    <link rel="shortcut icon" href="/favicon.ico?v=4">
 <?php
 $canonical = isset($canonicalUrl) ? $canonicalUrl : 'https://studiofirstfloor.nl/' . basename($_SERVER['PHP_SELF']);
 $desc = isset($pageDescription) ? $pageDescription : "Studio First Floor — Pilates Studio. Kracht, Rust & Stijl in 's Gravenmoer.";
