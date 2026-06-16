@@ -1,7 +1,7 @@
     <header class="site-header" id="siteHeader">
         <div class="container header-inner">
             <a href="index.php" class="logo">
-                <img src="img/logo.png" alt="Studio First Floor logo" fetchpriority="high">
+                <img src="img/logo-header.png" alt="Studio First Floor logo" fetchpriority="high">
             </a>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu openen">
                 <span></span>
