@@ -78,7 +78,7 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
     z-index: 1000;
     background-color: var(--bg);
     border-bottom: 1px solid rgba(115, 93, 82, 0.1);
-    padding: 64px 0;
+    padding: 40px 0;
 }
 
 .header-inner {
@@ -87,7 +87,7 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
     justify-content: space-between;
 }
 
-.logo img { height: 500px; width: auto; }
+.logo img { height: 400px; width: auto; }
 
 .main-nav ul {
     display: flex;
@@ -506,7 +506,7 @@ section { padding: var(--section-gap) 0; }
 }
 
 .footer-brand .footer-logo {
-    height: 600px;
+    height: 400px;
     width: auto;
     margin-bottom: 1.5rem;
 }
