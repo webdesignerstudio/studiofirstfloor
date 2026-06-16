@@ -168,10 +168,7 @@ include 'inc/nav.php';
                 </div>
                 <div class="about-image">
                     <div class="image-bg"></div>
-                    <picture>
-                        <source srcset="img/placeholder-eigenaar.webp" type="image/webp">
-                        <img src="img/placeholder-eigenaar.jpg" alt="Renate Emmen - eigenaar Studio First Floor" width="800" height="1000" loading="lazy">
-                    </picture>
+                    <img src="img/placeholder-eigenaar.jpg" alt="Renate Emmen - eigenaar Studio First Floor" width="800" height="1000" loading="lazy">
                 </div>
             </div>
         </div>
