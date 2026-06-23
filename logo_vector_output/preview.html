@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Studio First Floor - Logo Vergelijking</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', sans-serif; background: #1a1a2e; color: #eee; padding: 40px; }
+  h1 { text-align: center; margin-bottom: 10px; font-size: 1.4rem; color: #a0c4ff; }
+  p.sub { text-align: center; font-size: 0.85rem; color: #888; margin-bottom: 40px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; max-width: 1400px; margin: 0 auto; }
+  .card { background: #16213e; border-radius: 16px; overflow: hidden; border: 1px solid #0f3460; }
+  .card-header { padding: 14px 20px; background: #0f3460; }
+  .card-header h2 { font-size: 0.9rem; font-weight: 600; color: #a0c4ff; }
+  .card-header p { font-size: 0.75rem; color: #6a8ab5; margin-top: 2px; }
+  .card-body { padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+  .preview-box { border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 20px; min-height: 260px; }
+  .bg-cream { background: #fbf4ee; }
+  .bg-dark { background: #2c2c2c; }
+  .bg-checker { background-image: linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%); background-size: 20px 20px; background-position: 0 0, 0 10px, 10px -10px, -10px 0px; background-color: #fff; }
+  .preview-box img, .preview-box object, .preview-box embed { max-width: 100%; max-height: 220px; width: auto; height: auto; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 20px; font-size: 0.7rem; font-weight: 600; }
+  .badge-original { background: #2d6a4f; color: #95d5b2; }
+  .badge-vector { background: #1d3557; color: #a8dadc; }
+  .badge-transparent { background: #4a1942; color: #e0aaff; }
+  .badge-print { background: #7b2d00; color: #ffb347; }
+  .stats { font-size: 0.72rem; color: #6a8ab5; margin-top: 4px; }
+  .row-label { font-size: 0.75rem; color: #888; margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<h1>Studio First Floor — Logo Vectorisatie Preview</h1>
+<p class="sub">Vergelijking: Origineel PNG vs Vectorized SVG output</p>
+
+<div class="grid">
+
+  <!-- ORIGINEEL -->
+  <div class="card">
+    <div class="card-header">
+      <h2>📷 Origineel PNG <span class="badge badge-original">ORIGINEEL</span></h2>
+      <p>Full_Logo_Original_Achtergrond.png — 2000×2000px</p>
+    </div>
+    <div class="card-body">
+      <p class="row-label">Met crème achtergrond:</p>
+      <div class="preview-box bg-cream">
+        <img src="../Full_Logo_Original_Achtergrond.png" alt="Origineel logo">
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG TRANSPARANT -->
+  <div class="card">
+    <div class="card-header">
+      <h2>🔲 SVG Transparant <span class="badge badge-transparent">VECTOR</span></h2>
+      <p>logo_transparant.svg — Schaalbaar, geen achtergrond</p>
+    </div>
+    <div class="card-body">
+      <p class="row-label">Op witte achtergrond:</p>
+      <div class="preview-box bg-cream">
+        <img src="logo_transparant.svg" alt="SVG Transparant op wit">
+      </div>
+      <p class="row-label">Op donkere achtergrond:</p>
+      <div class="preview-box bg-dark">
+        <img src="logo_transparant.svg" alt="SVG Transparant op donker">
+      </div>
+      <p class="row-label">Op geblokt (transparantie check):</p>
+      <div class="preview-box bg-checker">
+        <img src="logo_transparant.svg" alt="SVG Transparant checker">
+      </div>
+    </div>
+  </div>
+
+  <!-- SVG MET ACHTERGROND -->
+  <div class="card">
+    <div class="card-header">
+      <h2>🖼️ SVG met Achtergrond <span class="badge badge-vector">VECTOR</span></h2>
+      <p>logo_met_achtergrond.svg — Originele crème kleur</p>
+    </div>
+    <div class="card-body">
+      <p class="row-label">Volledig logo vector:</p>
+      <div class="preview-box bg-cream">
+        <img src="logo_met_achtergrond.svg" alt="SVG met achtergrond">
+      </div>
+      <p class="row-label">PNG Transparant (hoge resolutie):</p>
+      <div class="preview-box bg-checker">
+        <img src="logo_transparant.png" alt="PNG transparant">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="max-width:1400px; margin: 30px auto 0; padding: 20px; background: #16213e; border-radius: 16px; border: 1px solid #0f3460;">
+  <h2 style="color:#a0c4ff; font-size:1rem; margin-bottom:16px;">📁 Gegenereerde Bestanden</h2>
+  <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+    <div style="background:#0f3460; padding:14px; border-radius:10px;">
+      <div class="badge badge-transparent" style="margin-bottom:8px;">SVG</div>
+      <p style="font-size:0.85rem; font-weight:600;">logo_transparant.svg</p>
+      <p class="stats">✓ Vector · Transparant · Web + Print</p>
+    </div>
+    <div style="background:#0f3460; padding:14px; border-radius:10px;">
+      <div class="badge badge-vector" style="margin-bottom:8px;">SVG</div>
+      <p style="font-size:0.85rem; font-weight:600;">logo_met_achtergrond.svg</p>
+      <p class="stats">✓ Vector · Crème achtergrond · Web</p>
+    </div>
+    <div style="background:#0f3460; padding:14px; border-radius:10px;">
+      <div class="badge badge-original" style="margin-bottom:8px;">PNG</div>
+      <p style="font-size:0.85rem; font-weight:600;">logo_transparant.png</p>
+      <p class="stats">✓ 2000×2000px · Transparant · Web</p>
+    </div>
+    <div style="background:#0f3460; padding:14px; border-radius:10px;">
+      <div class="badge badge-print" style="margin-bottom:8px;">PDF</div>
+      <p style="font-size:0.85rem; font-weight:600;">logo_drukwerk_100x100mm.pdf</p>
+      <p class="stats">✓ 100×100mm · Drukwerk · Vector</p>
+    </div>
+    <div style="background:#0f3460; padding:14px; border-radius:10px;">
+      <div class="badge badge-print" style="margin-bottom:8px;">PDF</div>
+      <p style="font-size:0.85rem; font-weight:600;">logo_drukwerk_A4.pdf</p>
+      <p class="stats">✓ A4 formaat · Drukwerk · Vector</p>
+    </div>
+    <div style="background:#0f3460; padding:14px; border-radius:10px;">
+      <div class="badge badge-print" style="margin-bottom:8px;">EPS</div>
+      <p style="font-size:0.85rem; font-weight:600;">logo_drukwerk.eps</p>
+      <p class="stats">✓ EPS · Professioneel drukwerk</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

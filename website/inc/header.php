@@ -56,8 +56,9 @@ $ogImage = isset($pageImage) ? $pageImage : 'https://studiofirstfloor.nl/img/her
             "addressCountry": "NL"
         },
         "openingHours": [
-            "Mo-Fr 08:00-20:00",
-            "Sa 09:00-13:00"
+            "Mo-Th 08:00-21:00",
+            "Fr 08:00-12:00",
+            "Sa On appointment"
         ],
         "image": "https://studiofirstfloor.nl/img/hero.png"
     }
@@ -67,7 +68,7 @@ $ogImage = isset($pageImage) ? $pageImage : 'https://studiofirstfloor.nl/img/her
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/style.min.css" as="style">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="css/style.min.css?v=3" as="style">
+    <link rel="stylesheet" href="css/style.min.css?v=3">
 </head>
 <body>

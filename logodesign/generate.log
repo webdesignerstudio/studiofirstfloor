@@ -1,0 +1,128 @@
+=== Stap 1: Kleuranalyse ===
+Input: (2000, 2000)
+  Cluster 0: RGB(250, 243, 237) #faf3ed (95.81%)
+  Cluster 2: RGB(214, 203, 193) #d6cbc1 (1.77%)
+  Cluster 1: RGB(117, 106, 91) #756a5b (1.59%)
+  Cluster 3: RGB(146, 138, 127) #928a7f (0.44%)
+  Cluster 4: RGB(179, 171, 161) #b3aba1 (0.40%)
+  Logo bounds: x=149-1919, y=332-1394
+  Background: #faf3ed
+  Text:       #a2978a
+  Silhouette: #e7dfd7
+  Final Text:       #756a5b
+  Final Silhouette: #d6cbc1
+
+=== Stap 2: Laagscheiding voor vectorisatie ===
+  Cropped: 1810x1102
+  Saved text layer: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/tmp/text_layer.bmp
+  Saved sil layer:  /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/tmp/sil_layer.bmp
+
+=== Stap 3: Potrace vectorisatie ===
+  Text SVG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/tmp/text.svg
+  Sil SVG:  /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/tmp/silhouette.svg
+
+=== Stap 4: SVG samenvoegen ===
+  Text paths: 37
+  Sil paths:  244
+  Flipped text paths: 37
+  Flipped sil paths:  244
+
+=== Stap 5: Genereren van alle varianten ===
+  SVG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_origineel.svg
+  SVG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_transparant.svg
+  SVG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_zwartwit.svg
+  SVG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_wit_op_donker.svg
+  SVG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_monochrome.svg
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_origineel.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_origineel_1024.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_origineel_512.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_transparant.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_transparant_1024.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_transparant_512.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_zwartwit.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_zwartwit_1024.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_zwartwit_512.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_wit_op_donker.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_wit_op_donker_1024.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_wit_op_donker_512.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_monochrome.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_monochrome_1024.png
+  PNG: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_monochrome_512.png
+  PDF: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_origineel.pdf
+  PDF: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_transparant.pdf
+  PDF: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_zwartwit.pdf
+  PDF: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_wit_op_donker.pdf
+  PDF: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_monochrome.pdf
+
+=== Stap 6: Horizontale variant ===
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal.pdf
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_transparant.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_transparant.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_transparant.pdf
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_zwartwit.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_zwartwit.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_zwartwit.pdf
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_wit_op_donker.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_wit_op_donker.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_wit_op_donker.pdf
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_monochrome.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_monochrome.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_horizontal_monochrome.pdf
+
+=== Stap 7: Avatar / sociale icoon ===
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_avatar.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_avatar.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_avatar.pdf
+
+=== Stap 8: Clean typografische variant ===
+  Generated: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_typographic.svg, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_typographic.png, /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/logo_typographic.pdf
+
+=== Stap 9: Huisstijlbestand schrijven ===
+  Huisstijl: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign/huisstijl.md
+
+=== KLAAR ===
+Alle bestanden staan in: /home/ubuntu/Documents/klanten webdesignerstudio/studiofirstfloor/logodesign
+Bestanden:
+  comparison_check.png
+  generate.log
+  generate_logo_package.py
+  huisstijl.md
+  logo_avatar.pdf
+  logo_avatar.png
+  logo_avatar.svg
+  logo_contact_sheet.png
+  logo_horizontal.pdf
+  logo_horizontal.png
+  logo_horizontal.svg
+  logo_horizontal_monochrome.pdf
+  logo_horizontal_monochrome.png
+  logo_horizontal_monochrome.svg
+  logo_horizontal_transparant.pdf
+  logo_horizontal_transparant.png
+  logo_horizontal_transparant.svg
+  logo_horizontal_wit_op_donker.pdf
+  logo_horizontal_wit_op_donker.png
+  logo_horizontal_wit_op_donker.svg
+  logo_horizontal_zwartwit.pdf
+  logo_horizontal_zwartwit.png
+  logo_horizontal_zwartwit.svg
+  logo_monochrome.pdf
+  logo_monochrome.png
+  logo_monochrome.svg
+  logo_monochrome_1024.png
+  logo_monochrome_512.png
+  logo_origineel.pdf
+  logo_origineel.png
+  logo_origineel.svg
+  logo_origineel_1024.png
+  logo_origineel_512.png
+  logo_transparant.pdf
+  logo_transparant.png
+  logo_transparant.svg
+  logo_transparant_1024.png
+  logo_transparant_512.png
+  logo_typographic.pdf
+  logo_typographic.png
+  logo_typographic.svg
+  logo_wit_op_donker.pdf
+  logo_wit_op_donker.png
+  logo_wit_op_donker.svg
+  logo_wit_op_donker_1024.png
+  logo_wit_op_donker_512.png
+  logo_zwartwit.pdf
+  logo_zwartwit.png
+  logo_zwartwit.svg
+  logo_zwartwit_1024.png
+  logo_zwartwit_512.png
+  preview.html
+  server.log

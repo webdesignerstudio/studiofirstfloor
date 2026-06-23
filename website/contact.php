@@ -52,7 +52,7 @@ $diensten = $cfg['diensten'] ?? [];
 
                     <div style="margin-bottom: 1.5rem;">
                         <span class="label-caps" style="color: var(--taupe-brown); display: block; margin-bottom: 8px;">OPENINGSTIJDEN</span>
-                        <p style="margin: 0;">Maandag t/m vrijdag: 08:00 – 20:00<br>Zaterdag: 09:00 – 13:00</p>
+                        <p style="margin: 0;">Maandag t/m donderdag: 08:00 – 21:00<br>Vrijdag: 08:00 – 12:00<br>Zaterdag: op afspraak<br>Zondag: gesloten</p>
                     </div>
                 </div>
 

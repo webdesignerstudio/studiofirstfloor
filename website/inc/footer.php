@@ -13,6 +13,8 @@
                     <h4>Navigatie</h4>
                     <a href="index.php">HOME</a>
                     <a href="aanbod.php">AANBOD</a>
+                    <a href="rooster.php">ROOSTER</a>
+                    <a href="over-mij.php">OVER MIJ</a>
                     <a href="tarieven.php">TARIEVEN</a>
                     <a href="contact.php">CONTACT</a>
                 </div>

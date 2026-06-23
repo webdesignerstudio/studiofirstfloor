@@ -22,6 +22,14 @@ include 'inc/nav.php';
 
     <section style="padding-top: 0;">
         <div class="container">
+            <div class="section-header reveal" style="margin-bottom: 40px;">
+                <div class="section-tag">
+                    <div class="line"></div>
+                    <span>MET ABONNEMENT</span>
+                    <div class="line"></div>
+                </div>
+                <h2>Maandabonnementen</h2>
+            </div>
             <div class="pricing-grid pricing-grid-center reveal">
                 <div class="pricing-card featured">
                     <h3>1× per week</h3>

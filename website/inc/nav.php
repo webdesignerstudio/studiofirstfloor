@@ -12,6 +12,8 @@
                 <ul>
                     <li><a href="index.php" <?php echo ($currentPage === 'home') ? 'class="active"' : ''; ?>>HOME</a></li>
                     <li><a href="aanbod.php" <?php echo ($currentPage === 'aanbod') ? 'class="active"' : ''; ?>>AANBOD</a></li>
+                    <li><a href="rooster.php" <?php echo ($currentPage === 'rooster') ? 'class="active"' : ''; ?>>ROOSTER</a></li>
+                    <li><a href="over-mij.php" <?php echo ($currentPage === 'over-mij') ? 'class="active"' : ''; ?>>OVER MIJ</a></li>
                     <li><a href="tarieven.php" <?php echo ($currentPage === 'tarieven') ? 'class="active"' : ''; ?>>TARIEVEN</a></li>
                     <li><a href="contact.php" <?php echo ($currentPage === 'contact') ? 'class="active"' : ''; ?>>CONTACT</a></li>
                 </ul>

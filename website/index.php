@@ -39,8 +39,8 @@ include 'inc/nav.php';
                         <span>ONZE MISSIE</span>
                     </div>
                     <h2>Persoonlijke aandacht</h2>
-                    <p>Studio First Floor is jouw private sanctuary voor Pilates. We combineren de zachtheid van een high-end spa met de gedisciplineerde precisie van een professionele studio.</p>
-                    <p>Maximaal 8 personen per les. Professionele begeleiding, gratis parkeren, materialen aanwezig en een lounge met gratis koffie en thee.</p>
+                    <p>Bij Studio First Floor draait alles om persoonlijke aandacht. In onze rustige en stijlvolle studio train je in kleine groepen van maximaal 8 deelnemers. Zo is er volop ruimte voor professionele begeleiding en aandacht voor jouw techniek en doelen.</p>
+                    <p>Alle materialen zijn aanwezig, parkeren kan op loopafstand en er is een gezellige lounge met koffie en thee. Beweeg, versterk en kom tot rust.</p>
                     <a href="aanbod.php" class="intro-link">
                         ONTDEK ONZE STUDIO <span>&rarr;</span>
                     </a>
@@ -101,6 +101,33 @@ include 'inc/nav.php';
         </div>
     </section>
 
+    <!-- Over Renate -->
+    <section style="background-color: var(--surface); border-top: 1px solid rgba(115, 93, 82, 0.1); border-bottom: 1px solid rgba(115, 93, 82, 0.1);">
+        <div class="container">
+            <div class="about-grid reveal">
+                <div class="about-content">
+                    <div class="section-tag" style="justify-content: flex-start;">
+                        <div class="line"></div>
+                        <span>OVER MIJ</span>
+                    </div>
+                    <h2>Hoi, ik ben Renate</h2>
+                    <p>Mijn lesgeefavontuur begon zo'n 30 jaar geleden in 's Gravenmoer. Sindsdien heb ik op veel plekken in de regio mensen in beweging mogen brengen en vele trends en ontwikkelingen binnen beweging, fitness en bewust trainen van dichtbij meegemaakt.</p>
+                    <div class="about-quote">
+                        <p>"Iedereen verdient een moment voor zichzelf. Een plek om even los te laten en opnieuw contact te maken met het lichaam. Dat is wat ik hier wil creëren."</p>
+                    </div>
+                    <p>Of je nu net begint of al jaren ervaring hebt, je bent welkom zoals je bent.</p>
+                    <a href="over-mij.php" class="intro-link">
+                        LEES MIJN VERHAAL <span>&rarr;</span>
+                    </a>
+                </div>
+                <div class="about-image">
+                    <div class="image-bg"></div>
+                    <img src="img/placeholder-eigenaar.jpg" alt="Renate Emmen - eigenaar Studio First Floor" width="800" height="1000" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Instagram Feed -->
     <section class="instagram-section">
         <div class="container">
@@ -146,31 +173,6 @@ include 'inc/nav.php';
                 <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 @pilatesstudiofirstfloor
             </a>
-        </div>
-    </section>
-
-    <!-- Over Renate -->
-    <section style="background-color: var(--surface); border-top: 1px solid rgba(115, 93, 82, 0.1); border-bottom: 1px solid rgba(115, 93, 82, 0.1);">
-        <div class="container">
-            <div class="about-grid reveal">
-                <div class="about-content">
-                    <div class="section-tag" style="justify-content: flex-start;">
-                        <div class="line"></div>
-                        <span>OVER MIJ</span>
-                    </div>
-                    <h2>Hoi, ik ben Renate</h2>
-                    <p>Pilates is voor mij niet zomaar een workout — het is een manier van leven. Jaren geleden, toen ik op zoek was naar balans tussen werk en welzijn, ontdekte ik de kracht van bewuste beweging. Het was liefde op het eerste gezicht.</p>
-                    <p>Ik besloot mijn passie om te zetten in iets concreets: een plek waar kleinschaligheid, persoonlijke aandacht en kwaliteit centraal staan. Studio First Floor is mijn droom in vervulling.</p>
-                    <div class="about-quote">
-                        <p>"Iedereen verdient een moment voor zichzelf. Een plek waar je even alles loslaat en weer contact maakt met je lichaam. Dat is wat ik hier creëer."</p>
-                    </div>
-                    <p>Of je nu voor het eerst een mat uitrolt of al jaren ervaring hebt — hier voel je je thuis. Ik kijk ernaar uit om je te verwelkomen.</p>
-                </div>
-                <div class="about-image">
-                    <div class="image-bg"></div>
-                    <img src="img/placeholder-eigenaar.jpg" alt="Renate Emmen - eigenaar Studio First Floor" width="800" height="1000" loading="lazy">
-                </div>
-            </div>
         </div>
     </section>
 

@@ -25,7 +25,7 @@ include 'inc/nav.php';
             <div class="legal-content reveal" style="max-width: 800px;">
 
                 <h2>Wat moet ik meenemen naar een les?</h2>
-                <p>Comfortabele, rekbare kleding is voldoende. Pilates wordt blotevoets of met antislip-sokken gedaan. Wij zorgen voor alle materialen: matten, props en eventueel kleine apparaten. Neem wel een handdoek mee voor transpiratie.</p>
+                <p>Comfortabele stretchkleding is voldoende. Pilates wordt blotevoets of met antislip-sokken gedaan. Wij zorgen voor alle materialen: matten, props en eventueel kleine apparaten. Neem wel een handdoek mee voor transpiratie en een waterflesje.</p>
 
                 <h2>Kan ik als beginner direct meedoen?</h2>
                 <p>Absoluut. Onze Basic Pilates is speciaal opgezet voor beginners. Daarnaast zijn alle groepslessen klein (maximaal 8 personen), zodat de instructeur ruim aandacht heeft voor ieders niveau en houding. Geen ervaring nodig.</p>
@@ -49,10 +49,10 @@ include 'inc/nav.php';
                 <p>Een losse les kost €14,50. Een proefles is gratis. Bekijk alle tarieven op onze <a href="tarieven.php">tarievenpagina</a>.</p>
 
                 <h2>Waar kan ik gratis parkeren?</h2>
-                <p>Direct bij de studio aan Emmalaan 1F in 's Gravenmoer is gratis parkeergelegenheid beschikbaar.</p>
+                <p>Direct bij de studio aan de Emmalaan in 's Gravenmoer is gratis parkeergelegenheid beschikbaar. Wanneer de parkeerplaatsen vol zijn is er gelegenheid om te parkeren aan de Hoofdstraat bij de Geubel.</p>
 
                 <h2>Kan ik koffie drinken voor of na de les?</h2>
-                <p>Ja, in onze lounge staat altijd gratis koffie en thee klaar. Een moment om even te landen voor of na je sessie.</p>
+                <p>Ja, in onze lounge staat altijd koffie en thee klaar. Een moment om even na te genieten na je sessie.</p>
 
                 <h2>Hebben jullie ook Personal of Duo Pilates?</h2>
                 <p>Ja, beide zijn mogelijk op aanvraag. Personal Pilates is volledig 1-op-1, Duo Pilates is met z'n tweeën. Neem <a href="contact.php">contact op</a> voor beschikbaarheid en prijzen.</p>

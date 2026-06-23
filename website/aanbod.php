@@ -83,7 +83,7 @@ include 'inc/nav.php';
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Wat moet ik meenemen?<span class="faq-icon">+</span></div>
-                    <div class="faq-answer"><p>Comfortabele sportkleding is voldoende. Alle materialen zoals matjes, props en gewichten zijn in de studio aanwezig. Na de les kun je gebruikmaken van onze douche.</p></div>
+                    <div class="faq-answer"><p>Comfortabele stretchkleding is voldoende. Pilates wordt blotevoets of met antislip-sokken gedaan. Wij zorgen voor alle materialen: matten, props en eventueel kleine apparaten. Neem wel een handdoek mee voor transpiratie en een waterflesje.</p></div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">Kan ik een proefles doen?<span class="faq-icon">+</span></div>

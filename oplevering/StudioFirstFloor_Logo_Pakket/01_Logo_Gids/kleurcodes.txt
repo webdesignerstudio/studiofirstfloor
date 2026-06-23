@@ -1,0 +1,61 @@
+================================================================================
+  STUDIO FIRST FLOOR — OFFICIELE KLEURCODES
+================================================================================
+
+Hieronder vindt u alle officiële kleurcodes voor het Studio First Floor logo.
+Gebruik uitsluitend deze kleuren om consistentie te waarborgen.
+
+--------------------------------------------------------------------------------
+  PRIMair KLEUR (Donkerbruin)
+--------------------------------------------------------------------------------
+  Naam:           Studio Brown
+  HEX:            #6A584C
+  RGB:            R106  G88  B76
+  CMYK:           C0%  M17%  Y28%  K58%
+  Pantone (ref):  7516 C  (benadering)
+
+--------------------------------------------------------------------------------
+  SECUNDaire KLEUR (Lichtbeige)
+--------------------------------------------------------------------------------
+  Naam:           Studio Beige
+  HEX:            #D7C9BD
+  RGB:            R215  G201  B189
+  CMYK:           C0%  M7%  Y12%  K16%
+  Pantone (ref):  7527 C  (benadering)
+
+--------------------------------------------------------------------------------
+  ACCENT KLEUR (Taupe)
+--------------------------------------------------------------------------------
+  Naam:           Studio Taupe
+  HEX:            #A6998B
+  RGB:            R166  G153  B139
+  CMYK:           C0%  M8%  Y16%  K35%
+  Pantone (ref):  7530 C  (benadering)
+
+--------------------------------------------------------------------------------
+  ACHTERGROND KLEUR (Crème)
+--------------------------------------------------------------------------------
+  Naam:           Studio Cream
+  HEX:            #F7EFE6
+  RGB:            R247  G239  B230
+  CMYK:           C0%  M3%  Y7%  K3%
+  Pantone (ref):  7527 C  (benadering)
+
+--------------------------------------------------------------------------------
+  MONochroom VARIANTEN
+--------------------------------------------------------------------------------
+  Zwart:          #000000  |  RGB 0,0,0  |  CMYK 0,0,0,100
+  Wit:            #FFFFFF  |  RGB 255,255,255  |  CMYK 0,0,0,0
+
+================================================================================
+  BELANGRIJKE OPMERKING
+================================================================================
+
+  • Pantone-waarden zijn benaderingen. Raadpleeg altijd een fysieke 
+    Pantone-gids voor exacte kleurmatching bij drukwerk.
+  • Voor digitaal gebruik: gebruik altijd de HEX- of RGB-waarden.
+  • Voor drukwerk: gebruik altijd de CMYK-waarden.
+  • Gebruik nooit de "vul een kleur in"-functie; gebruik altijd de 
+    exacte kleurcodes hierboven.
+
+================================================================================
