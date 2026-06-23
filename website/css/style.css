@@ -593,8 +593,8 @@ section { padding: var(--section-gap) 0; }
 @media (min-width: 768px) {
     .footer-grid { grid-template-columns: 2fr 1fr 1.5fr; }
     .footer-action { align-items: flex-end; text-align: right; }
-    .footer-nav { gap: 10px; }
-    .footer-nav h4 { margin-bottom: 4px; }
+    .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 16px; align-items: start; }
+    .footer-nav h4 { grid-column: 1 / -1; margin-bottom: 4px; }
 }
 
 /* Reveal */
