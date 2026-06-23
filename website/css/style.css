@@ -950,8 +950,8 @@ section { padding: var(--section-gap) 0; }
 .schedule-card-body .lesson-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--taupe-brown); margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
 .schedule-card-body .lesson-label .lesson-icon { width: 14px; height: 14px; stroke: var(--hot-pink); fill: none; stroke-width: 1.5; flex-shrink: 0; }
 .schedule-card-footer { padding: 0 32px 32px; }
-.schedule-card-footer .schedule-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--hot-pink); transition: var(--transition); }
-.schedule-card-footer .schedule-link:hover { color: var(--secondary); }
+.schedule-card .schedule-link { display: inline-flex; align-items: center; gap: 6px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--hot-pink); transition: var(--transition); }
+.schedule-card .schedule-link:hover { color: var(--secondary); }
 
 @media (min-width: 768px) {
     .schedule-grid { grid-template-columns: repeat(2, 1fr); }
