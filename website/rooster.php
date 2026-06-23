@@ -49,7 +49,7 @@ include 'inc/nav.php';
                         </div>
                     </div>
                     <div class="schedule-card-footer">
-                        <a href="contact.php" class="schedule-link">BOEK DEZE LES <span>&rarr;</span></a>
+                        <a href="contact.php?dienst=Flow Pilates&amp;bericht=Ik wil boeken voor maandag avond Flow Pilates (19:00 - 19:50 uur)." class="schedule-link">BOEK DEZE LES <span>&rarr;</span></a>
                     </div>
                 </div>
 
@@ -68,7 +68,7 @@ include 'inc/nav.php';
                         </div>
                     </div>
                     <div class="schedule-card-footer">
-                        <a href="contact.php" class="schedule-link">BOEK DEZE LES <span>&rarr;</span></a>
+                        <a href="contact.php?dienst=Basic Pilates&amp;bericht=Ik wil boeken voor woensdag avond Basic Pilates (19:00 - 19:50 uur)." class="schedule-link">BOEK DEZE LES <span>&rarr;</span></a>
                     </div>
                 </div>
 
@@ -84,6 +84,7 @@ include 'inc/nav.php';
                             </div>
                             <div class="lesson-time">08:00 — 08:50 uur</div>
                             <div class="lesson-name">Early Bird Pilates</div>
+                            <a href="contact.php?dienst=Early Bird Pilates&amp;bericht=Ik wil boeken voor donderdag ochtend Early Bird Pilates (08:00 - 08:50 uur)." class="schedule-link" style="margin-top: 8px; font-size: 0.65rem;">BOEK DEZE LES <span>&rarr;</span></a>
                         </div>
                         <div class="lesson">
                             <div class="lesson-label">
@@ -92,10 +93,8 @@ include 'inc/nav.php';
                             </div>
                             <div class="lesson-time">19:00 — 19:50 uur</div>
                             <div class="lesson-name">Power Pilates</div>
+                            <a href="contact.php?dienst=Power Pilates&amp;bericht=Ik wil boeken voor donderdag avond Power Pilates (19:00 - 19:50 uur)." class="schedule-link" style="margin-top: 8px; font-size: 0.65rem;">BOEK DEZE LES <span>&rarr;</span></a>
                         </div>
-                    </div>
-                    <div class="schedule-card-footer">
-                        <a href="contact.php" class="schedule-link">BOEK DEZE LES <span>&rarr;</span></a>
                     </div>
                 </div>
 
@@ -111,6 +110,7 @@ include 'inc/nav.php';
                             </div>
                             <div class="lesson-time">09:00 — 09:50 uur</div>
                             <div class="lesson-name">Basic Pilates</div>
+                            <a href="contact.php?dienst=Basic Pilates&amp;bericht=Ik wil boeken voor vrijdag ochtend Basic Pilates (09:00 - 09:50 uur)." class="schedule-link" style="margin-top: 8px; font-size: 0.65rem;">BOEK DEZE LES <span>&rarr;</span></a>
                         </div>
                         <div class="lesson">
                             <div class="lesson-label">
@@ -119,10 +119,8 @@ include 'inc/nav.php';
                             </div>
                             <div class="lesson-time">10:00 — 10:50 uur</div>
                             <div class="lesson-name">Flow Pilates</div>
+                            <a href="contact.php?dienst=Flow Pilates&amp;bericht=Ik wil boeken voor vrijdag ochtend Flow Pilates (10:00 - 10:50 uur)." class="schedule-link" style="margin-top: 8px; font-size: 0.65rem;">BOEK DEZE LES <span>&rarr;</span></a>
                         </div>
-                    </div>
-                    <div class="schedule-card-footer">
-                        <a href="contact.php" class="schedule-link">BOEK DEZE LES <span>&rarr;</span></a>
                     </div>
                 </div>
             </div>
@@ -133,7 +131,7 @@ include 'inc/nav.php';
         <div class="container">
             <div class="cta-box reveal">
                 <div class="shape-1"></div>
-                <img class="shape-2" src="img/icon-master.svg" alt="" aria-hidden="true">
+                <div class="shape-2"></div>
                 <div class="cta-box-inner">
                     <span class="label-caps tag">BEGINNERS WELKOM</span>
                     <h2>Nog niet zeker welke les bij je past?</h2>

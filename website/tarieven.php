@@ -35,13 +35,13 @@ include 'inc/nav.php';
                     <h3>1× per week</h3>
                     <p class="price">€49,99<span> / maand</span></p>
                     <p class="price-desc">1 groepsles per week. Maandelijks opzegbaar.</p>
-                    <a href="contact.php" class="btn-hot">BOEKEN</a>
+                    <a href="contact.php?dienst=Overige / Vrijblijvend&amp;bericht=Ik ben geïnteresseerd in het 1x per week maandabonnement." class="btn-hot">BOEKEN</a>
                 </div>
                 <div class="pricing-card featured">
                     <h3>2× per week</h3>
                     <p class="price">€89,99<span> / maand</span></p>
                     <p class="price-desc">2 groepslessen per week. Maandelijks opzegbaar.</p>
-                    <a href="contact.php" class="btn-hot">BOEKEN</a>
+                    <a href="contact.php?dienst=Overige / Vrijblijvend&amp;bericht=Ik ben geïnteresseerd in het 2x per week maandabonnement." class="btn-hot">BOEKEN</a>
                 </div>
             </div>
 
@@ -59,19 +59,19 @@ include 'inc/nav.php';
                         <h3>Try out</h3>
                         <p class="price">€29,99</p>
                         <p class="price-desc">3 proeflessen. 1 maand geldig.</p>
-                        <a href="contact.php" class="btn-outline">BOEKEN</a>
+                        <a href="contact.php?dienst=Overige / Vrijblijvend&amp;bericht=Ik ben geïnteresseerd in de Try out (3 proeflessen)." class="btn-outline">BOEKEN</a>
                     </div>
                     <div class="pricing-card">
                         <h3>10 rittenkaart</h3>
                         <p class="price">€119,99</p>
                         <p class="price-desc">10 lessen. 3 maanden geldig.</p>
-                        <a href="contact.php" class="btn-outline">BOEKEN</a>
+                        <a href="contact.php?dienst=Overige / Vrijblijvend&amp;bericht=Ik ben geïnteresseerd in de 10-rittenkaart." class="btn-outline">BOEKEN</a>
                     </div>
                     <div class="pricing-card">
                         <h3>Losse les</h3>
                         <p class="price">€14,50</p>
                         <p class="price-desc">Eenmalige deelname aan een groepsles.</p>
-                        <a href="contact.php" class="btn-outline">BOEKEN</a>
+                        <a href="contact.php?dienst=Overige / Vrijblijvend&amp;bericht=Ik wil een losse les boeken." class="btn-outline">BOEKEN</a>
                     </div>
                 </div>
             </div>
@@ -90,13 +90,13 @@ include 'inc/nav.php';
                         <h3>Personal Pilates</h3>
                         <p class="price">Op aanvraag</p>
                         <p class="price-desc">1-op-1 sessie, volledig afgestemd op jouw doelen.</p>
-                        <a href="contact.php" class="btn-outline">AFSPRAAK MAKEN</a>
+                        <a href="contact.php?dienst=Personal Pilates&amp;bericht=Ik wil graag een afspraak maken voor Personal Pilates." class="btn-outline">AFSPRAAK MAKEN</a>
                     </div>
                     <div class="pricing-card featured">
                         <h3>Duo Pilates</h3>
                         <p class="price">Op aanvraag</p>
                         <p class="price-desc">2 personen. Gezelligheid én gerichte aandacht.</p>
-                        <a href="contact.php" class="btn-hot">AFSPRAAK MAKEN</a>
+                        <a href="contact.php?dienst=Duo Pilates&amp;bericht=Ik wil graag een afspraak maken voor Duo Pilates." class="btn-hot">AFSPRAAK MAKEN</a>
                     </div>
                 </div>
             </div>

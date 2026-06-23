@@ -111,6 +111,27 @@ $diensten = $cfg['diensten'] ?? [];
 
 <script>
 (function() {
+    // URL parameters uitlezen en formulier vullen
+    (function fillFromUrl() {
+        const params = new URLSearchParams(window.location.search);
+        const dienst = params.get('dienst');
+        const bericht = params.get('bericht');
+        const dienstSelect = document.getElementById('dienst');
+        const berichtArea = document.getElementById('bericht');
+
+        if (dienst && dienstSelect) {
+            for (let i = 0; i < dienstSelect.options.length; i++) {
+                if (dienstSelect.options[i].value === dienst) {
+                    dienstSelect.selectedIndex = i;
+                    break;
+                }
+            }
+        }
+        if (bericht && berichtArea) {
+            berichtArea.value = bericht;
+        }
+    })();
+
     // CSRF token ophalen (gecached in sessionStorage)
     (function loadCsrf() {
         const cached = sessionStorage.getItem('csrf_token');
