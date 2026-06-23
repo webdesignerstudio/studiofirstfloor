@@ -124,6 +124,8 @@ p { color: var(--on-surface-variant); margin-bottom: 1rem; }
 
 .header-cta:hover { background-color: var(--secondary); }
 
+.mobile-cta-item { display: none; }
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;

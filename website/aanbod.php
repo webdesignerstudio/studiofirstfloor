@@ -62,7 +62,7 @@ include 'inc/nav.php';
         </div>
     </section>
 
-    <section style="padding-top: 0;">
+    <section style="padding-top: 60px;">
         <div class="container">
             <div class="section-header reveal" style="margin-bottom: 40px;">
                 <div class="section-tag">
