@@ -768,7 +768,7 @@ section { padding: var(--section-gap) 0; }
     section { padding: 70px 0; }
     .footer-grid { gap: 32px; }
     .footer-action { align-items: flex-start; text-align: left; }
-    .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+    .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 24px; }
     .footer-nav h4 { grid-column: 1 / -1; margin-bottom: 4px; }
     .footer-nav a { font-size: 0.7rem; }
 }
