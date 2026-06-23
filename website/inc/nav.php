@@ -16,6 +16,7 @@
                     <li><a href="over-mij.php" <?php echo ($currentPage === 'over-mij') ? 'class="active"' : ''; ?>>OVER MIJ</a></li>
                     <li><a href="tarieven.php" <?php echo ($currentPage === 'tarieven') ? 'class="active"' : ''; ?>>TARIEVEN</a></li>
                     <li><a href="contact.php" <?php echo ($currentPage === 'contact') ? 'class="active"' : ''; ?>>CONTACT</a></li>
+                    <li class="mobile-cta-item"><a href="contact.php" class="mobile-cta-link">BOEK JE PROEFLES <span>&rarr;</span></a></li>
                 </ul>
             </nav>
             <a href="contact.php" class="header-cta">BOEK NU</a>

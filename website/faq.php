@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'FAQ';
 $pageDescription = 'Veelgestelde vragen over Studio First Floor: proeflessen, abonnementen, kleding, parkeren en meer.';
-$currentPage = '';
+$currentPage = 'faq';
 include 'inc/header.php';
 include 'inc/nav.php';
 ?>
