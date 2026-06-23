@@ -68,7 +68,7 @@ $ogImage = isset($pageImage) ? $pageImage : 'https://studiofirstfloor.nl/img/her
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/style.min.css?v=3" as="style">
-    <link rel="stylesheet" href="css/style.min.css?v=3">
+    <link rel="preload" href="css/style.min.css?v=4" as="style">
+    <link rel="stylesheet" href="css/style.min.css?v=4">
 </head>
 <body>

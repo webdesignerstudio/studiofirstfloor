@@ -436,7 +436,7 @@ include 'inc/nav.php';
         <div class="container">
             <div class="cta-box reveal">
                 <div class="shape-1"></div>
-                <div class="shape-2"></div>
+                <img class="shape-2" src="img/icon-master.svg" alt="" aria-hidden="true">
                 <div class="cta-box-inner">
                     <span class="label-caps tag">KEUZE IS AAN JOU</span>
                     <h2>Welke stijl spreekt je aan?</h2>

@@ -101,7 +101,7 @@ include 'inc/nav.php';
         <div class="container">
             <div class="cta-box reveal">
                 <div class="shape-1"></div>
-                <div class="shape-2"></div>
+                <img class="shape-2" src="img/icon-master.svg" alt="" aria-hidden="true">
                 <div class="cta-box-inner">
                     <span class="label-caps tag">BEGINNERS WELKOM</span>
                     <h2>Benieuwd wat bij jou past?</h2>

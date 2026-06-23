@@ -477,6 +477,10 @@ section { padding: var(--section-gap) 0; }
     background-color: rgba(230, 225, 224, 0.3);
     border: 1px solid rgba(115, 93, 82, 0.1);
     transform: translate(-30%, 40%);
+    object-fit: contain;
+    padding: 40px;
+    box-sizing: border-box;
+    pointer-events: none;
 }
 
 .cta-box-inner {
