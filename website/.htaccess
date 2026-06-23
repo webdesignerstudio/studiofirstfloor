@@ -18,16 +18,6 @@ Options -Indexes
     Deny from all
 </FilesMatch>
 
-# Blokkeer demo-pagina's en versie-mappen
-<FilesMatch "^(rooster-demo|diensten-demo|overmij-demo|foto-demo)\.(php|html)$">
-    Order Allow,Deny
-    Deny from all
-</FilesMatch>
-<DirectoryMatch "^/(v[1-5]|stitch[12]|variatie-[abc])(/|$)">
-    Order Allow,Deny
-    Deny from all
-</DirectoryMatch>
-
 # Blokkeer .env en andere gevoelige bestanden
 <FilesMatch "^\.">
     Order Allow,Deny
