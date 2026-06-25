@@ -128,26 +128,36 @@ include 'inc/nav.php';
         </div>
     </section>
 
-    <!-- Flyer Preview -->
+    <!-- Instagram Feed -->
     <section class="instagram-section">
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-tag">
                     <div class="line"></div>
-                    <span>INFORMATIE</span>
+                    <span>COMMUNITY</span>
                     <div class="line"></div>
                 </div>
-                <h2>Onze Flyer</h2>
-                <p style="max-width: 500px; margin: 0 auto;">Download onze flyer voor een overzicht van alle lessen, tarieven en contactgegevens.</p>
+                <h2>Volg Ons</h2>
+                <p style="max-width: 500px; margin: 0 auto;">Blijf op de hoogte van nieuwe lessen, sfeerbeelden en een kijkje achter de schermen bij Studio First Floor.</p>
             </div>
-            <div class="instagram-grid flyer-grid reveal">
-                <div class="flyer-item">
-                    <img src="img/flyer-voorzijde.png" alt="Flyer voorzijde Studio First Floor" loading="lazy">
-                </div>
-                <div class="flyer-item">
-                    <img src="img/flyer-achterzijde.png" alt="Flyer achterzijde Studio First Floor" loading="lazy">
-                </div>
+            <div class="instagram-grid reveal">
+                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                    <img src="img/flyer-voorzijde.jpg" alt="Flyer voorzijde Studio First Floor" loading="lazy">
+                    <div class="ig-overlay">
+                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </div>
+                </a>
+                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                    <img src="img/flyer-achterzijde.jpg" alt="Flyer achterzijde Studio First Floor" loading="lazy">
+                    <div class="ig-overlay">
+                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </div>
+                </a>
             </div>
+            <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-cta">
+                <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                @pilatesstudiofirstfloor
+            </a>
         </div>
     </section>
 
