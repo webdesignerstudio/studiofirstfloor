@@ -811,6 +811,22 @@ section { padding: var(--section-gap) 0; }
     fill: none;
     stroke-width: 1.5;
 }
+
+.flyer-grid { grid-template-columns: repeat(2, 1fr); }
+.flyer-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(29, 27, 27, 0.1);
+}
+.flyer-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.flyer-item:hover img { transform: scale(1.02); }
+
 .instagram-cta {
     display: inline-flex;
     align-items: center;

@@ -128,51 +128,26 @@ include 'inc/nav.php';
         </div>
     </section>
 
-    <!-- Instagram Feed -->
+    <!-- Flyer Preview -->
     <section class="instagram-section">
         <div class="container">
             <div class="section-header reveal">
                 <div class="section-tag">
                     <div class="line"></div>
-                    <span>COMMUNITY</span>
+                    <span>INFORMATIE</span>
                     <div class="line"></div>
                 </div>
-                <h2>Volg Ons</h2>
-                <p style="max-width: 500px; margin: 0 auto;">Blijf op de hoogte van nieuwe lessen, sfeerbeelden en een kijkje achter de schermen bij Studio First Floor.</p>
+                <h2>Onze Flyer</h2>
+                <p style="max-width: 500px; margin: 0 auto;">Download onze flyer voor een overzicht van alle lessen, tarieven en contactgegevens.</p>
             </div>
-            <div class="instagram-grid reveal">
-                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
-                    <picture>
-                        <source srcset="img/studio-1.webp" type="image/webp">
-                        <img src="img/studio-1.jpg" alt="Studio First Floor" width="1254" height="1254" loading="lazy">
-                    </picture>
-                    <div class="ig-overlay">
-                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </div>
-                </a>
-                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
-                    <picture>
-                        <source srcset="img/studio-2.webp" type="image/webp">
-                        <img src="img/studio-2.jpg" alt="Pilates les" width="1254" height="1254" loading="lazy">
-                    </picture>
-                    <div class="ig-overlay">
-                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </div>
-                </a>
-                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
-                    <picture>
-                        <source srcset="img/studio-3.webp" type="image/webp">
-                        <img src="img/studio-3.jpg" alt="Studio sfeer" width="1080" height="1080" loading="lazy">
-                    </picture>
-                    <div class="ig-overlay">
-                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                    </div>
-                </a>
+            <div class="instagram-grid flyer-grid reveal">
+                <div class="flyer-item">
+                    <img src="img/flyer-voorzijde.png" alt="Flyer voorzijde Studio First Floor" loading="lazy">
+                </div>
+                <div class="flyer-item">
+                    <img src="img/flyer-achterzijde.png" alt="Flyer achterzijde Studio First Floor" loading="lazy">
+                </div>
             </div>
-            <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-cta">
-                <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-                @pilatesstudiofirstfloor
-            </a>
         </div>
     </section>
 
@@ -181,7 +156,7 @@ include 'inc/nav.php';
         <div class="container">
             <div class="cta-box reveal">
                 <div class="shape-1"></div>
-                <img class="shape-2" src="img/icon-master.svg" alt="" aria-hidden="true">
+                <div class="shape-2"></div>
                 <div class="cta-box-inner">
                     <span class="label-caps tag">KLEINE GROEPEN &mdash; BEGINNERS WELKOM</span>
                     <h2>Begin Jouw Reis Vandaag</h2>
