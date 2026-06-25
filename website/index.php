@@ -141,18 +141,26 @@ include 'inc/nav.php';
                 <p style="max-width: 500px; margin: 0 auto;">Blijf op de hoogte van nieuwe lessen, sfeerbeelden en een kijkje achter de schermen bij Studio First Floor.</p>
             </div>
             <div class="instagram-grid reveal">
-                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                <div class="flyer-item" onclick="openLightbox('img/flyer-voorzijde.jpg')">
                     <img src="img/flyer-voorzijde.jpg" alt="Flyer voorzijde Studio First Floor" loading="lazy">
-                    <div class="ig-overlay">
-                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <div class="flyer-overlay">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
+                        <span>Klik om te vergroten</span>
                     </div>
-                </a>
-                <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-item">
+                </div>
+                <div class="flyer-item" onclick="openLightbox('img/flyer-achterzijde.jpg')">
                     <img src="img/flyer-achterzijde.jpg" alt="Flyer achterzijde Studio First Floor" loading="lazy">
-                    <div class="ig-overlay">
-                        <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    <div class="flyer-overlay">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="11" x2="11" y1="8" y2="14"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
+                        <span>Klik om te vergroten</span>
                     </div>
-                </a>
+                </div>
+
+            <!-- Lightbox -->
+            <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+                <span class="lightbox-close">&times;</span>
+                <img id="lightbox-img" src="" alt="Flyer vergroot">
+            </div>
             </div>
             <a href="https://instagram.com/pilatesstudiofirstfloor" target="_blank" rel="noopener" class="instagram-cta">
                 <svg viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
