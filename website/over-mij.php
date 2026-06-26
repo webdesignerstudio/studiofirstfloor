@@ -43,7 +43,7 @@ include 'inc/nav.php';
         <div class="container">
             <div class="cta-box reveal">
                 <div class="shape-1"></div>
-                <img class="shape-2" src="img/icon-master.svg" alt="" aria-hidden="true">
+                <div class="shape-2"></div>
                 <div class="cta-box-inner">
                     <span class="label-caps tag">BEGINNERS WELKOM</span>
                     <h2>Kom je kennismaken?</h2>
